@@ -2,7 +2,7 @@ const pug = require('pug')
 fs = require('fs');
 
 
-//varaibles
+//variables
 let content,docName,dochtml,docUrl,apphtml,appLink,organization;
 
 let invoiceJson={
