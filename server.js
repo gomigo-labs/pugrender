@@ -1,6 +1,78 @@
 const pug = require("pug");
 const fs = require("fs");
-const orgJson = require('org.json')
+// const orgJson = require('org.json')
+
+const orgJsonData = {
+  brandName: "Skull Paper Inc",
+  businessCategory: "service",
+  businessName: "Skull Medico",
+  businessProfile: true,
+  businessType: "pvt",
+  businessVerification: true,
+  communicationAddress: {
+    address_line_1: "Moon Apartments",
+    address_line_2: "Mars Complex",
+    address_line_3: "Jupiter lane",
+    address_line_4: "",
+    city: "Delhi",
+    country: "India",
+    state: "Delhi",
+    zip: "110051",
+  },
+  companyPan: "AAKCR1346R",
+  decentroTxnId: "1725F2543E7749CA87AAAAEAAFCFFF04",
+  documents: ["test"],
+  email: "jayesh@gomigo.io",
+  GSTIN: "07AAKCR1346R1ZR",
+  individualPan: "TEST",
+  kycData: {
+    additionalPlacesOfBusinessInState: [],
+    centralJurisdiction: "RANGE - 82",
+    centralJurisdictionCode: "ZJ0802",
+    constitutionOfBusiness: "Private Limited Company",
+    currentStatusOfRegistration: "Active",
+    cxdt: "",
+    gstin: "07AAKCR1346R1ZR",
+    legalName: "RIVERSYS TECHNOLOGIES PRIVATE LIMITED",
+    natureOfBusiness: ["Supplier of Services"],
+    pan: "AAKCR1346R",
+    primaryBusinessContact: {
+      address:
+        "NEW PRIYADARSHINI APARTMENTS, FLAT NO. 108, 3RD FLOOR, PLOT NO.19, SECTOR-5, , DWARKA, , North West Delhi, Delhi, 110075",
+      natureOfBusinessAtAddress: "Supplier of Services",
+    },
+    registrationDate: "02/06/2020",
+    stateJurisdiction: "Ward 61",
+    stateJurisdictionCode: "DL061",
+    taxpayerType: "Regular",
+    tradeName: "RIVERSYS TECHNOLOGIES PRIVATE LIMITED",
+  },
+  mobileNo: "98989898989",
+  modifiedOn: 1623677338619,
+  organizationAccount: {
+    accountName: "Riversys Technologies Ltd",
+    accountNumber: "462515003100000001",
+    customerId: "MASTER001",
+    email: "aayush@gomigo.io",
+    ifscCode: "ICIC0000106",
+    mobileNo: "9769468163",
+    upiId: "decfin.riversys@icici",
+    upiQrCode:
+      "iVBORw0KGgoAAAANSUhEUgAAAPUAAAD1AQAAAACgyo7IAAAChklEQVR4nO2YPY6DMBCFJ6Kg5Ai+SXIxJCNxseQmPgIlBcrse88EsrvSditPEQoL+FyMPT9vbPM/n9U+/MP/ly9mdlmy241/7jYmfI74aTkGz+4PcQw93sp6W8YkEIKPhr+d+3OYi118k/1JawrD3Qu593L7c9ii8SmtVxvN8UbX/7K/IZf/zXpYbYxPTt9+xkdDrvwZE4LgbfiZX+24nqUrcP2W+rsxUoG+16eWfGP+WNKb2eBlvWBN2Okcg89lvQ5T6pnfeEMSPc2SXYNw1kJmDazunPXHeuaUynkI3hW7cldhcEERVyQo3XMILtXD/q4Xn71mDfVlRSSE4JIWVh143dbdfgVBDsFpNVUPyI50H7kcD8GpL0wdJLRhEosQ6jdWEoTj6e+DXN9hEr1+457fz/hszllw0DVMCVk9czrLURBe9Y+D9GXYqj6f/m/PFQSwX9KSi5ZzxkdrrobBWMQ3DnOBSGPSIwh3+drsFQQbpe+tP2zNqX/0uko3DymlDmf9ac6hdV2Rw2sTu68px+BdeSXMlGolglz72V+35ui1dOCEwbX/qnIYheOBr9F/sWF4uR5y46e+NOXMb2ZNlRbOdKa2NjkCZ39N6eMhnvu7mUTGj/rTmNejyexMIor0yH/Y5KO/bc0zBVldA/pDU6dYRdCjcJmuo6dOAswf1KQhCN8vFDCJp84BmcS3uqYA3GstZP2eaiZJ+vq3/rApr60XCo6ujnR1KX0++pvWPCuXq/37qZNK/RYfbflY7z/MdLUA//dc01t/FoFT8BikxtZfyznuv0Jw2M8gWHX/8agnAY/B5X9e/S5dPek5lcYsCt+PTvrB1tB03XX2D435X8+Hf/i/8i/d6VAvhC/4xwAAAABJRU5ErkJggg==",
+  },
+  permanentAddress: {
+    address_line_1: "Moon Apartments",
+    address_line_2: "Mars Complex",
+    address_line_3: "Jupiter lane",
+    address_line_4: "F-19/101",
+    city: "Delhi",
+    country: "India",
+    state: "Delhi",
+    zip: "110051",
+  },
+  PK: "organization",
+  SK: "skull-dev",
+};
 
 //variables
 let content,
@@ -32,6 +104,9 @@ let content,
   customerGSTIN,
   isIGST,
   invoiceQr,
+  orgJson,
+  uniqueTaxes,
+  invoiceJsonData,
   description;
 
 let invoiceJson = {
@@ -74,7 +149,7 @@ let invoiceJson = {
   customerEmail: " ",
   customerGSTIN: "27AAFCM0612E1ZZ",
   customerId: "e3721959",
-  customerName: "test customer",
+  customerName: "TEST CUSTOMER",
   customerNotes: "test",
   customerNumber: "456456465",
   customerUpiId: "test@icici",
@@ -175,6 +250,9 @@ let invoiceJson = {
   taxableAmount: 900,
   tenantId: "skull-dev",
   termsAndConditions: "big ass terms and termsAndConditions",
+  vehicleNo: "DL-4567",
+  eWayBillNo: "10007821738973",
+  uniqueTaxes: { "IGST@15": 30, "IGST@18": 72 },
   invoiceQr:
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAYAAAAZtYVBAAAAAklEQVR4AewaftIAAAYgSURBVO3BQY4cORDAQFLo/3+Z66NOAgrVM5YXGWF/MMYlFmNcZDHGRRZjXGQxxkUWY1xkMcZFFmNcZDHGRRZjXGQxxkUWY1xkMcZFFmNcZDHGRRZjXOTDSyq/qeJE5YmKE5WTihOVk4oTlZOKE5XfVPHGYoyLLMa4yGKMi3z4sopvUjlRuVnFTuVEZVexU9mp7CpOKr5J5ZsWY1xkMcZFFmNc5MMPU3mi4omKncpJxRsVO5VdxRMqu4qdyq7im1SeqPhJizEushjjIosxLvLhf6Zip7JTOanYVexUvqniDZVdxb9sMcZFFmNcZDHGRT7841R2FbuKncqJyq7iCZXfVPF/shjjIosxLrIY4yIffljFT6p4omKn8kbFTmVXsVM5UTlROal4ouImizEushjjIosxLvLhy1R+k8quYqeyqzip2KnsKnYqu4qdyq5ip7Kr2KnsKnYqT6jcbDHGRRZjXGQxxkU+vFTxN1XsVHYVO5UTlTdU3lDZVexUnqj4lyzGuMhijIssxriI/cELKruKncquYqeyq9ip7Cq+SeWkYqfyRMVOZVexU9lV/CSVXcWJyq7imxZjXGQxxkUWY1zE/uCLVJ6oeEPlpOIJlV3FTuWNip3KScUTKicVJyq7ip3KScUbizEushjjIosxLvLhJZVdxRsqJxUnFTuVk4onKk5UdhVPVOxUdhUnFTuVE5VdxU7lNy3GuMhijIssxrjIh5cqdiq7ihOVk4qfpHKisqv4SSonKruKJ1R2FScVJyrftBjjIosxLrIY4yIfvqxip3JScaLyhMqu4kRlV7FTOVF5QuWJihOVN1R2FX/TYoyLLMa4yGKMi3x4SeWk4kRlV7GreELlROWJipOKncpJxU7lRGVXsavYqZxUnKicVPykxRgXWYxxkcUYF/nwZRU7lZOKncpJxU7lRGVXcaKyq/hJFW+o7Cp2KjuVN1R+0mKMiyzGuMhijIvYH3yRyq7iN6nsKn6SyknFTmVXsVN5o+IJlZOK37QY4yKLMS6yGOMiH15SOVE5qdipnFS8oXJS8UTFTuUJlZOKncqJyhMVT6icVLyxGOMiizEushjjIh++rGKn8kTFicquYlexU9lV7FR2KruKE5UnKk5UTip2KruKncqu4kTlb1qMcZHFGBdZjHGRDz+sYqeyU3miYqdyUvFExRMVJyq7ip3KrmKnsqt4omKnsqu4yWKMiyzGuMhijIvYH/wglV3FGyq7ip3KScUTKicVO5WTip3KScVOZVdxorKr2KmcVPymxRgXWYxxkcUYF/nwksquYldxovJExRMVb1TsVJ6o2Km8UbFTeUJlV7FT+ZsWY1xkMcZFFmNc5MNLFTuVXcVJxU5lV3Gisqs4UTmp2KnsKm5WsVN5ouIJlV3FG4sxLrIY4yKLMS7y4SWVXcVO5aTiRGVXcaJyUnGisqs4UdlVnFScqOxUdhVPVHyTyk9ajHGRxRgXWYxxkQ8vVexUdhUnKruKE5VdxYnKicoTKicqP0nlm1R2FX/TYoyLLMa4yGKMi3x4SWVXsVN5Q2VXcaLyTSq7ihOVXcWJyknFTuVE5Q2VXcVJxTctxrjIYoyLLMa4iP3BP0zlpGKnclLxhMquYqeyq9ipnFScqOwqnlD5poo3FmNcZDHGRRZjXMT+4AWV31RxovJExb9E5aRip7Kr2KnsKk5UTireWIxxkcUYF1mMcZEPX1bxTSpvVJyo7CreUHmiYqdyUrFTOal4QmVXsavYqXzTYoyLLMa4yGKMi3z4YSpPVDyhcqJyUrFTOan4JpWTiidU3qj4mxZjXGQxxkUWY1zkwz+uYqdys4oTlZ3KruKJip3Kicqu4jctxrjIYoyLLMa4yId/nMpJxRMVv0nlpGKnsqvYqZxU7FR2FTuVXcVPWoxxkcUYF1mMcZEPP6ziJ1XsVHYqJxUnKm9UnFTsVJ5Q2VV8U8VOZVfxTYsxLrIY4yKLMS7y4ctUfpPK31SxU3lC5ZtUnqh4Q2VX8cZijIssxrjIYoyL2B+McYnFGBdZjHGRxRgXWYxxkcUYF1mMcZHFGBdZjHGRxRgXWYxxkcUYF1mMcZHFGBdZjHGRxRgX+Q+MMeWE17KYkgAAAABJRU5ErkJggg==",
 };
@@ -216,6 +294,9 @@ content = pug.renderFile("template.pug", {
     invoiceJson.customerGSTIN.slice(0, 2) ===
     invoiceJson.organizationGSTIN.slice(0, 2),
   invoiceQr: invoiceJson.invoiceQr,
+  orgJson: orgJsonData,
+  invoiceJsonData: invoiceJson,
+  uniqueTaxes: Object.entries(invoiceJson.uniqueTaxes),
 });
 
 fs.writeFile("template_html.html", content, function (err, data) {
