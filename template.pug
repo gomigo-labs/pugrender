@@ -817,6 +817,9 @@ html
             .mr-5 {
               margin-right: 5px;
             }
+            .mt-5 {
+              margin-top: 5px;
+            }
 
 body
     div(class="div-center bg-f7f7f7")
@@ -842,15 +845,15 @@ body
                 div(class="width-100 ph-10") 
                   div() Due Date
                   div() !{new Date(dueDate)}
-            div(class="flex mt-10 align-items-start")
+            div(class="flex-container mt-10 align-items-start")
                 div(class="width-100 ph-10 fs-12") 
                   div(class="bold") BILL TO
-                  div(class="mt-10") !{billingAddressLine1}
+                  div(class="mt-5") !{billingAddressLine1}
                   div() !{billingAddressLine2}
                   div() !{billingState}, !{billingZipCode}
-                div(class="width-100 ph-10 px-10") 
+                div(class="width-100 ph-10 px-10 fs-12") 
                   div(class="bold") SHIP TO
-                  div(class="mt-10") !{shippingAddressLine1}
+                  div(class="mt-5") !{shippingAddressLine1}
                   div() !{shippingAddressLine2}
                   div() !{shippingState}, !{shippingZipCode}
                 div(class="width-100 flex align-items-start") 
