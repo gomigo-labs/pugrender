@@ -5,15 +5,15 @@ html
             .div-center {
                 display: flex !important;
                 justify-content: center !important;
-                height: 100% !important;
+                height: fit-content !important;
+                width: 100% !important;
             }
 
             .body-center {
-                text-align: center !important;
-                margin: auto !important;
                 border-radius: 4px;
                 padding: 10px;
                 height: 450px;
+                width: 80%;
             }
 
             .height-80 {
@@ -192,7 +192,7 @@ html
                 width: 95%
             }
 
-            .width-100-per {
+            .width-100 {
                 width: 100%
             }
 
@@ -528,6 +528,10 @@ html
                  margin-top: 25px;
             }
 
+             .mt-10 {
+                 margin-top: 10px;
+            }
+
             .lh-30{
                 line-height: 30px;
             }
@@ -621,6 +625,10 @@ html
                 width: 15%
             }
 
+            .width-50 {
+                width: 85%
+            }
+
             .width-85 {
                 width: 85%
             }
@@ -650,16 +658,298 @@ html
             .color-red {
                 color: red;
             }
+            
+            .black-strip {
+              width: 100%;
+              height: 11px;
+              background: #000000;
+            }
+
+            .black-border {
+              height: 3px;
+              border: 3px solid black;
+              border-left: none;
+              border-right: none;
+              margin-top: 0 10px;
+            box-sizing: border-box;
+            }
+
+            .go {
+              font-family: "Montserrat", sans-serif !important;
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: bold;
+              color: #434343;
+            }
+
+            .migo {
+              font-family: "Montserrat", sans-serif !important;
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: bold;
+              color: #0065BD;
+            }
+
+            .text-secondary {
+              font-size: 12px;
+              line-height: 16px;
+              width: 30%
+            }
+
+            .label {
+              font-size: 12px;
+              font-weight: 600;
+              line-height: 16px;
+            }
+
+            .label-Padding {
+              padding: 0 15px 0 5px
+            }
+
+            .flex {
+              display: flex;
+              width: 100%;
+              height: 40px;
+              align-items: center;
+              font-size: 12px;
+              padding: 0 10px;
+              box-sizing: border-box;
+            }
+
+            .flex-align {
+              display: flex;
+              height: 40px;
+              width: 100%;
+              flex-direction: column;
+              justify-content: space-around;
+              font-size: 12px;
+              padding: 0 10px;
+              border-bottom: 2px solid #ececec;
+              box-sizing: border-box;
+            }
+
+            .bg-e2e2e2 {
+              background: #e2e2e2;
+            }
+
+            .ph-10 {around
+              padding: 0 10px
+            }
+
+            .bold {
+              font-weight: bold
+            }
+
+            .fs-10 {
+              font-size: 10px;
+              height: 10px;
+            }
+
+            .fs-12 {
+              font-size: 12px;
+              
+            }
+
+            .fs-12-lh-20 {
+              font-size: 12px;
+              line-height: 20px;
+            }
+
+            .color-secondary  {
+              color: #707070
+            }
+
+            .mx-10 {
+              padding: 0 20px;
+              box-sizing: border-box;
+            }
+            .px-10 {
+              padding: 0 10px;
+              box-sizing: border-box;
+            }
+
+            .pn {
+              padding: 0 !important;
+            }
+            .pl-10 {
+              padding-left: 10px;
+            }
+            .pr-10 {
+              padding-right: 10px;
+            }
+
+            .flex-container {
+              display: flex;
+              padding: 10px;
+              box-sizing: border-box;
+            }
+
+            .justify-content-end {
+              justify-content: flex-end;
+          
+            }
+
+            .bank-details {
+              font-size: 12px;
+              font-weight: medium;
+              line-height: 20px;
+            }
+
+            .flex-direction-column {
+              flex-direction: column
+            }
+
+            .align-items-end {
+              align-items: flex-end;
+            }
+            .align-items-start {
+              align-items: flex-start;
+            }
+
+            .text-align-end {
+              text-align: end;
+            }
+
+            .border-top {
+              border-top: 1px solid black
+            }
+
+            .mr-5 {
+              margin-right: 5px;
+            }
 
 body
     div(class="div-center bg-f7f7f7")
-        div(class="body-center height-100 monst width-full bg-white")
-            div(class="monst display-flex mt-25")
-                span(class="monst fw-500 fc-434343 go-span") go
-                span(class="monst migo-span fw-500 fc-0065BD") migo
-            div(class="m-t-50")
-                div(class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30 dontLink " style="text-decoration: none; color: # 000;") !{description}
-                div(class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30") !{dochtml}
-                div(class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30") !{apphtml}
-                div(class="m-t-30 fs-14 fc-lightGrey dontLink") !{footer}
+        div(class="body-center height-100 width-85 monst bg-white")
+            div(class="monst mt-10")
+                span(class="go") go
+                span(class="migo") migo
+            div(class="monst mt-10")
+                div(class="text-secondary") 302, Plot #15, 3rd Floor, Kumar Tower Wazirpur, Industrial Area, Delhi NW, 110052
+            div(class="mt-10")
+                span(class="label") PHONE:
+                span(class="text-secondary label-Padding") !{organizationNo}
+                span(class="label") GSTIN:
+                span(class="text-secondary label-Padding") !{organizationGSTIN}
+            div(class="black-strip mt-10")
+            div(class="flex bg-e2e2e2 ph-10")
+                div(class="width-100 ph-10") 
+                  div() Invoice Number
+                  div() !{invoiceNumber}
+                div(class="width-100 ph-10") 
+                  div() Invoice Date
+                  div() !{new Date(invoiceDate)}
+                div(class="width-100 ph-10") 
+                  div() Due Date
+                  div() !{new Date(dueDate)}
+            div(class="flex mt-10 align-items-start")
+                div(class="width-100 ph-10 fs-12") 
+                  div(class="bold") BILL TO
+                  div(class="mt-10") !{billingAddressLine1}
+                  div() !{billingAddressLine2}
+                  div() !{billingState}, !{billingZipCode}
+                div(class="width-100 ph-10 px-10") 
+                  div(class="bold") SHIP TO
+                  div(class="mt-10") !{shippingAddressLine1}
+                  div() !{shippingAddressLine2}
+                  div() !{shippingState}, !{shippingZipCode}
+                div(class="width-100 flex align-items-start") 
+                  div(class="bold mr-5") PO Bill No: 
+                  div() !{orderNo}
+            div(class="flex mt-10 black-border")
+              div(class="width-100 ") 
+                div(class="bold fs-10") ITEMS
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") HSN
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") QTY
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") RATE/ITEM
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") DISCOUNT
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") TAX
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") AMOUNT
+            each val in lineItems
+              div(class="flex")
+                div(class="flex-align width-100 pn pl-10") 
+                  div(class="bold fs-12 ") !{val.itemName}
+                  div(class="fs-10 color-secondary") !{val.itemCode}
+                div(class="width-100 flex-align pn") 
+                  div(class="fs-10") !{val.itemHsnOrSac}
+                  div(class="width-100 ")
+                div(class="width-100 flex-align pn") 
+                  div(class="fs-10") !{val.itemQty}
+                  div(class="width-100 ")
+                div(class="width-100 flex-align pn") 
+                  div(class="fs-10") !{val.itemPrice}
+                  div(class="width-100 ")
+                div(class="width-100 flex-align pn") 
+                  div(class="fs-10") !{val.discount}
+                  div(class="width-100 ")
+                div(class="width-100 flex-align pn") 
+                  div(class="fs-10") !{val.taxableAmount}
+                  div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
+                div(class="width-100 flex-align pn pr-10") 
+                  div(class="fs-10") !{val.itemAmount}
+                  div(class="width-100 ")
+            div(class="flex mx-10 m-t-40 black-border")
+              div(class="width-100 ") 
+                div(class="bold fs-10 pn") 
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") 
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") !{lineItems.reduce((acc, obj) => acc + Number(obj.itemQty), 0)}
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") SUBTOTAL
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") 
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") !{lineItems.reduce((acc, obj) => acc + Number(obj.taxableAmount), 0).toFixed(1)}
+              div(class="width-100 ") 
+                div(class="bold fs-10 ") !{lineItems.reduce((acc, obj) => acc + Number(obj.itemAmount), 0).toFixed(1)}
+            div(class="width-100 flex-container") 
+              div(class="width-100 ")
+                div(class="bank-details") BANK DETAILS
+                  div(class="flex-container pn")
+                    div(class="fs-12-lh-20 width-100 pn") Account Number:
+                    div(class="fs-12-lh-20 width-100 pn") !{accountNumber}
+                  div(class="flex-container pn")
+                    div(class="fs-12-lh-20 width-100 pn") IFSC code:
+                    div(class="fs-12-lh-20 width-100 pn") !{ifscCode}
+                  div(class="flex-container pn")
+                    div(class="fs-12-lh-20 width-100 pn") Bank & Branch:
+                    div(class="fs-12-lh-20 width-100 pn") !{bankName}
+                  div(class="flex-container pn mt-10")
+                    div(class="width-100 ")
+                      div(class="fs-12-lh-20 width-100 pn") Payment QR code UPI Id
+                      div(class="fs-12-lh-20 width-100 pn") !{customerUpiId}
+                    div(class="fs-12-lh-20 width-100 pn") Account Number:
+                  div(class="flex-container pn")
+                    div(class="fs-12-lh-20 width-100 pn mt-10") Terms and Conditions
+                  div(class="flex-container pn")
+                    div(class="fs-12-lh-20 width-100 pn") 10 days return policy. Damaged items won't be taken back Bill is compulsory for returning items
+              div(class="width-100 flex-container flex-direction-column align-items-end") 
+                  div(class="flex-container pn width-50")
+                    div(class="fs-12-lh-20 text-align-end width-100 pn") Taxable Amount:
+                    div(class="fs-12-lh-20 text-align-end width-100 pn") !{Number(taxableAmount || 0).toFixed(1)}
+                  div(class="flex-container pn width-50")
+                    div(class="fs-12-lh-20 text-align-end width-100 pn") SGST@2.5:
+                    div(class="fs-12-lh-20 text-align-end width-100 pn") !{ifscCode}
+                  div(class="flex-container pn width-50")
+                    div(class="fs-12-lh-20 text-align-end width-100 pn") CGST@2.5:
+                    div(class="fs-12-lh-20 text-align-end width-100 pn") !{bankName}
+                  div(class="flex-container pn width-50 width-50")
+                    div(class="fs-12-lh-20 text-align-end width-50 border-top pn bold") GRAND TOTAL
+                    div(class="fs-12-lh-20 text-align-end width-50 border-top pn bold") !{bankName}
+                  div(class="flex-container pn width-50")
+                    div(class="fs-12-lh-20 text-align-end width-50 border-top pn") RECEIVED AMOUNT
+                    div(class="fs-12-lh-20 text-align-end width-50 border-top pn") !{bankName}
+                  div(class="flex-container pn width-50")
+                    div(class="fs-12-lh-20 text-align-end width-50 border-top pn") BALANCE AMOUNT
+                    div(class="fs-12-lh-20 text-align-end width-50 border-top pn") !{bankName}
+            <img src="iVBORw0KGgoAAAANSUhEUgAAAPUAAAD1AQAAAACgyo7IAAAChklEQVR4nO2YPY6DMBCFJ6Kg5Ai+SXIxJCNxseQmPgIlBcrse88EsrvSditPEQoL+FyMPT9vbPM/n9U+/MP/ly9mdlmy241/7jYmfI74aTkGz+4PcQw93sp6W8YkEIKPhr+d+3OYi118k/1JawrD3Qu593L7c9ii8SmtVxvN8UbX/7K/IZf/zXpYbYxPTt9+xkdDrvwZE4LgbfiZX+24nqUrcP2W+rsxUoG+16eWfGP+WNKb2eBlvWBN2Okcg89lvQ5T6pnfeEMSPc2SXYNw1kJmDazunPXHeuaUynkI3hW7cldhcEERVyQo3XMILtXD/q4Xn71mDfVlRSSE4JIWVh143dbdfgVBDsFpNVUPyI50H7kcD8GpL0wdJLRhEosQ6jdWEoTj6e+DXN9hEr1+457fz/hszllw0DVMCVk9czrLURBe9Y+D9GXYqj6f/m/PFQSwX9KSi5ZzxkdrrobBWMQ3DnOBSGPSIwh3+drsFQQbpe+tP2zNqX/0uko3DymlDmf9ac6hdV2Rw2sTu68px+BdeSXMlGolglz72V+35ui1dOCEwbX/qnIYheOBr9F/sWF4uR5y46e+NOXMb2ZNlRbOdKa2NjkCZ39N6eMhnvu7mUTGj/rTmNejyexMIor0yH/Y5KO/bc0zBVldA/pDU6dYRdCjcJmuo6dOAswf1KQhCN8vFDCJp84BmcS3uqYA3GstZP2eaiZJ+vq3/rApr60XCo6ujnR1KX0++pvWPCuXq/37qZNK/RYfbflY7z/MdLUA//dc01t/FoFT8BikxtZfyznuv0Jw2M8gWHX/8agnAY/B5X9e/S5dPek5lcYsCt+PTvrB1tB03XX2D435X8+Hf/i/8i/d6VAvhC/4xwAAAABJRU5ErkJggg==" alt="QR Code Image">
+
+                  
 

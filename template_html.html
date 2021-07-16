@@ -1,15 +1,15 @@
 <html><head><style type="text/css">.div-center {
     display: flex !important;
     justify-content: center !important;
-    height: 100% !important;
+    height: fit-content !important;
+    width: 100% !important;
 }
 
 .body-center {
-    text-align: center !important;
-    margin: auto !important;
     border-radius: 4px;
     padding: 10px;
     height: 450px;
+    width: 80%;
 }
 
 .height-80 {
@@ -188,7 +188,7 @@ a {
     width: 95%
 }
 
-.width-100-per {
+.width-100 {
     width: 100%
 }
 
@@ -524,6 +524,10 @@ body, button, html, input, select, textarea, div, p, span, label {
      margin-top: 25px;
 }
 
+ .mt-10 {
+     margin-top: 10px;
+}
+
 .lh-30{
     line-height: 30px;
 }
@@ -617,6 +621,10 @@ body, button, html, input, select, textarea, div, p, span, label {
     width: 15%
 }
 
+.width-50 {
+    width: 85%
+}
+
 .width-85 {
     width: 85%
 }
@@ -646,4 +654,163 @@ body, button, html, input, select, textarea, div, p, span, label {
 .color-red {
     color: red;
 }
-</style></head></html><body><div class="div-center bg-f7f7f7"><div class="body-center height-100 monst width-full bg-white"><div class="monst display-flex mt-25"><span class="monst fw-500 fc-434343 go-span">go</span><span class="monst migo-span fw-500 fc-0065BD">migo</span></div><div class="m-t-50"><div class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30 dontLink " style="text-decoration: none; color: # 000;">test</div><div class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30"></div><div class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30"></div><div class="m-t-30 fs-14 fc-lightGrey dontLink">test</div></div></div></div></body>
+
+.black-strip {
+  width: 100%;
+  height: 11px;
+  background: #000000;
+}
+
+.black-border {
+  height: 3px;
+  border: 3px solid black;
+  border-left: none;
+  border-right: none;
+  margin-top: 0 10px;
+box-sizing: border-box;
+}
+
+.go {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #434343;
+}
+
+.migo {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #0065BD;
+}
+
+.text-secondary {
+  font-size: 12px;
+  line-height: 16px;
+  width: 30%
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.label-Padding {
+  padding: 0 15px 0 5px
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  font-size: 12px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.flex-align {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 12px;
+  padding: 0 10px;
+  border-bottom: 2px solid #ececec;
+  box-sizing: border-box;
+}
+
+.bg-e2e2e2 {
+  background: #e2e2e2;
+}
+
+.ph-10 {around
+  padding: 0 10px
+}
+
+.bold {
+  font-weight: bold
+}
+
+.fs-10 {
+  font-size: 10px;
+  height: 10px;
+}
+
+.fs-12 {
+  font-size: 12px;
+  
+}
+
+.fs-12-lh-20 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.color-secondary  {
+  color: #707070
+}
+
+.mx-10 {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.px-10 {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.pn {
+  padding: 0 !important;
+}
+.pl-10 {
+  padding-left: 10px;
+}
+.pr-10 {
+  padding-right: 10px;
+}
+
+.flex-container {
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+
+}
+
+.bank-details {
+  font-size: 12px;
+  font-weight: medium;
+  line-height: 20px;
+}
+
+.flex-direction-column {
+  flex-direction: column
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+
+.text-align-end {
+  text-align: end;
+}
+
+.border-top {
+  border-top: 1px solid black
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+</style></head></html><body><div class="div-center bg-f7f7f7"><div class="body-center height-100 width-85 monst bg-white"><div class="monst mt-10"><span class="go">go</span><span class="migo">migo</span></div><div class="monst mt-10"><div class="text-secondary">302, Plot #15, 3rd Floor, Kumar Tower Wazirpur, Industrial Area, Delhi NW, 110052</div></div><div class="mt-10"><span class="label">PHONE:</span><span class="text-secondary label-Padding"></span><span class="label">GSTIN:</span><span class="text-secondary label-Padding">27AAACL1069K1ZC</span></div><div class="black-strip mt-10"></div><div class="flex bg-e2e2e2 ph-10"><div class="width-100 ph-10"> <div>Invoice Number</div><div>GOM1236</div></div><div class="width-100 ph-10"> <div>Invoice Date</div><div>Mon Jun 14 2021 12:57:49 GMT+0530 (India Standard Time)</div></div><div class="width-100 ph-10"> <div>Due Date</div><div>Sat Jun 26 2021 02:44:29 GMT+0530 (India Standard Time)</div></div></div><div class="flex mt-10 align-items-start"><div class="width-100 ph-10 fs-12"> <div class="bold">BILL TO</div><div class="mt-10">ABC-14, Wazirpur Industrial Area, New Delhi</div><div></div><div>Delhi, 110069</div></div><div class="width-100 ph-10 px-10"> <div class="bold">SHIP TO</div><div class="mt-10">ABC-14, Wazirpur Industrial Area, New Delhi</div><div></div><div>Delhi, 110069</div></div><div class="width-100 flex align-items-start"> <div class="bold mr-5">PO Bill No: </div><div>30056846</div></div></div><div class="flex mt-10 black-border"><div class="width-100 "> <div class="bold fs-10">ITEMS</div></div><div class="width-100 "> <div class="bold fs-10 ">HSN</div></div><div class="width-100 "> <div class="bold fs-10 ">QTY</div></div><div class="width-100 "> <div class="bold fs-10 ">RATE/ITEM</div></div><div class="width-100 "> <div class="bold fs-10 ">DISCOUNT</div></div><div class="width-100 "> <div class="bold fs-10 ">TAX</div></div><div class="width-100 "> <div class="bold fs-10 ">AMOUNT</div></div></div><div class="flex"><div class="flex-align width-100 pn pl-10"> <div class="bold fs-12 ">paper</div><div class="fs-10 color-secondary">15c150</div></div><div class="width-100 flex-align pn"> <div class="fs-10">00564</div><div class="width-100 "></div></div><div class="width-100 flex-align pn"> <div class="fs-10">5</div><div class="width-100 "></div></div><div class="width-100 flex-align pn"> <div class="fs-10">20</div><div class="width-100 "></div></div><div class="width-100 flex-align pn"> <div class="fs-10">0</div><div class="width-100 "></div></div><div class="width-100 flex-align pn"> <div class="fs-10">100</div><div class="width-100 fs-10 color-secondary">(18 %)</div></div><div class="width-100 flex-align pn pr-10"> <div class="fs-10">118</div><div class="width-100 "></div></div></div><div class="flex"><div class="flex-align width-100 pn pl-10"> <div class="bold fs-12 ">paper</div><div class="fs-10 color-secondary">8df675</div></div><div class="width-100 flex-align pn"> <div class="fs-10">00564</div><div class="width-100 "></div></div><div class="width-100 flex-align pn"> <div class="fs-10">5</div><div class="width-100 "></div></div><div class="width-100 flex-align pn"> <div class="fs-10">20</div><div class="width-100 "></div></div><div class="width-100 flex-align pn"> <div class="fs-10">0</div><div class="width-100 "></div></div><div class="width-100 flex-align pn"> <div class="fs-10">100</div><div class="width-100 fs-10 color-secondary">(18 %)</div></div><div class="width-100 flex-align pn pr-10"> <div class="fs-10">100</div><div class="width-100 "></div></div></div><div class="flex mx-10 m-t-40 black-border"><div class="width-100 "> <div class="bold fs-10 pn"> </div></div><div class="width-100 "> <div class="bold fs-10 "> </div></div><div class="width-100 "> <div class="bold fs-10 ">10</div></div><div class="width-100 "> <div class="bold fs-10 ">SUBTOTAL</div></div><div class="width-100 "> <div class="bold fs-10 "> </div></div><div class="width-100 "> <div class="bold fs-10 ">200.0</div></div><div class="width-100 "> <div class="bold fs-10 ">218.0</div></div></div><div class="width-100 flex-container"> <div class="width-100 "><div class="bank-details">BANK DETAILS<div class="flex-container pn"><div class="fs-12-lh-20 width-100 pn">Account Number:</div><div class="fs-12-lh-20 width-100 pn">String</div></div><div class="flex-container pn"><div class="fs-12-lh-20 width-100 pn">IFSC code:</div><div class="fs-12-lh-20 width-100 pn">String</div></div><div class="flex-container pn"><div class="fs-12-lh-20 width-100 pn">Bank & Branch:</div><div class="fs-12-lh-20 width-100 pn">String</div></div><div class="flex-container pn mt-10"><div class="width-100 "><div class="fs-12-lh-20 width-100 pn">Payment QR code UPI Id</div><div class="fs-12-lh-20 width-100 pn">test@icici</div></div><div class="fs-12-lh-20 width-100 pn">Account Number:</div></div><div class="flex-container pn"><div class="fs-12-lh-20 width-100 pn mt-10">Terms and Conditions</div></div><div class="flex-container pn"><div class="fs-12-lh-20 width-100 pn">10 days return policy. Damaged items won't be taken back Bill is compulsory for returning items</div></div></div></div><div class="width-100 flex-container flex-direction-column align-items-end"> <div class="flex-container pn width-50"><div class="fs-12-lh-20 text-align-end width-100 pn">Taxable Amount:</div><div class="fs-12-lh-20 text-align-end width-100 pn">900.0</div></div><div class="flex-container pn width-50"><div class="fs-12-lh-20 text-align-end width-100 pn">SGST@2.5:</div><div class="fs-12-lh-20 text-align-end width-100 pn">String</div></div><div class="flex-container pn width-50"><div class="fs-12-lh-20 text-align-end width-100 pn">CGST@2.5:</div><div class="fs-12-lh-20 text-align-end width-100 pn">String</div></div><div class="flex-container pn width-50 width-50"><div class="fs-12-lh-20 text-align-end width-50 border-top pn bold">GRAND TOTAL</div><div class="fs-12-lh-20 text-align-end width-50 border-top pn bold">String</div></div><div class="flex-container pn width-50"><div class="fs-12-lh-20 text-align-end width-50 border-top pn">RECEIVED AMOUNT</div><div class="fs-12-lh-20 text-align-end width-50 border-top pn">String</div></div><div class="flex-container pn width-50"><div class="fs-12-lh-20 text-align-end width-50 border-top pn">BALANCE AMOUNT</div><div class="fs-12-lh-20 text-align-end width-50 border-top pn">String</div></div></div></div><img src="iVBORw0KGgoAAAANSUhEUgAAAPUAAAD1AQAAAACgyo7IAAAChklEQVR4nO2YPY6DMBCFJ6Kg5Ai+SXIxJCNxseQmPgIlBcrse88EsrvSditPEQoL+FyMPT9vbPM/n9U+/MP/ly9mdlmy241/7jYmfI74aTkGz+4PcQw93sp6W8YkEIKPhr+d+3OYi118k/1JawrD3Qu593L7c9ii8SmtVxvN8UbX/7K/IZf/zXpYbYxPTt9+xkdDrvwZE4LgbfiZX+24nqUrcP2W+rsxUoG+16eWfGP+WNKb2eBlvWBN2Okcg89lvQ5T6pnfeEMSPc2SXYNw1kJmDazunPXHeuaUynkI3hW7cldhcEERVyQo3XMILtXD/q4Xn71mDfVlRSSE4JIWVh143dbdfgVBDsFpNVUPyI50H7kcD8GpL0wdJLRhEosQ6jdWEoTj6e+DXN9hEr1+457fz/hszllw0DVMCVk9czrLURBe9Y+D9GXYqj6f/m/PFQSwX9KSi5ZzxkdrrobBWMQ3DnOBSGPSIwh3+drsFQQbpe+tP2zNqX/0uko3DymlDmf9ac6hdV2Rw2sTu68px+BdeSXMlGolglz72V+35ui1dOCEwbX/qnIYheOBr9F/sWF4uR5y46e+NOXMb2ZNlRbOdKa2NjkCZ39N6eMhnvu7mUTGj/rTmNejyexMIor0yH/Y5KO/bc0zBVldA/pDU6dYRdCjcJmuo6dOAswf1KQhCN8vFDCJp84BmcS3uqYA3GstZP2eaiZJ+vq3/rApr60XCo6ujnR1KX0++pvWPCuXq/37qZNK/RYfbflY7z/MdLUA//dc01t/FoFT8BikxtZfyznuv0Jw2M8gWHX/8agnAY/B5X9e/S5dPek5lcYsCt+PTvrB1tB03XX2D435X8+Hf/i/8i/d6VAvhC/4xwAAAABJRU5ErkJggg==" alt="QR Code Image"></div></div></body>
