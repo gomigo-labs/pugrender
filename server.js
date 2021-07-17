@@ -421,7 +421,7 @@ let pharmaInvoiceJson = {
   },
   taxableAmount: "40.40",
   tenantId: "skull-dev",
-  termsAndConditions: "",
+  termsAndConditions: "Some Terms and condition",
   billType: "",
 };
 
