@@ -17,7 +17,8 @@ const createPdf = async (format) => {
 
     await page.pdf({
         format: format,
-        path: `my-invoice.pdf`
+        path: `my-invoice.pdf`,
+        landscape:true
     })
 
     await browser.close()
