@@ -1,5 +1,6 @@
 const pug = require("pug");
 const fs = require("fs");
+const PdfService = require('./pdf-service')
 // const orgJson = require('org.json')
 
 const orgJsonData = {
@@ -475,3 +476,6 @@ fs.writeFile("index_html.html", content, function (err, data) {
   }
   console.log("hello");
 });
+
+PdfService.createPdf('A5')
+
