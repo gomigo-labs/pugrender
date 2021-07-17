@@ -833,6 +833,11 @@ html
               border: 1px solid #000000;
               margin-right: 15px;
             }
+            .h-20px {
+              padding-top: 3px;
+              height: 20px;
+              box-sizing: border-box;
+            }
 
             .mn {
               margin: none !important
@@ -863,14 +868,14 @@ body
             div(class="black-strip mt-10")
             div(class="flex bg-e2e2e2 ph-10")
                 div(class="width-100 ph-10") 
-                  div() Invoice Number
-                  div() !{invoiceNumber}
+                  div(class="h-20px") Invoice Number
+                  div(class="h-20px") !{invoiceNumber}
                 div(class="width-100 ph-10") 
-                  div() Invoice Date
-                  div() !{invoiceDate}
+                  div(class="h-20px") Invoice Date
+                  div(class="h-20px") !{invoiceDate}
                 div(class="width-100 ph-10") 
-                  div() Due Date
-                  div() !{dueDate}
+                  div(class="h-20px") Due Date
+                  div(class="h-20px") !{dueDate}
             div(class="flex-container mt-10 align-items-start")
                 div(class="width-100 ph-10 fs-12-lh-20") 
                   div(class="bold") BILL TO
