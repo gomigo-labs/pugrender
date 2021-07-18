@@ -843,9 +843,23 @@ html
               margin: none !important
             }
 
+            .width-200 {
+              width: 300%
+            }
+
+            .position-absolute {
+               position: absolute;
+               bottom: 25px;
+               right: 30px;
+            }
+
+            .position-relative {
+              position: relative;
+            }
+
 body
     div(class="div-center bg-f7f7f7")
-        div(class="body-center height-100 width-85 monst bg-white")
+        div(class="body-center height-100 width-85 monst bg-white position-relative")
             div(class="flex-container")
               if invoiceJsonData.invoiceLogo[0]
                 div(class="br-1")
@@ -904,7 +918,7 @@ body
                       div(class="fs-12-lh-20 pr-10 bold") E-way Bill No:
                       div(class="fs-12-lh-20") !{invoiceJsonData.eWayBillNo}
             div(class="flex mt-10 black-border")
-              div(class="width-100 ") 
+              div(class="width-200 ") 
                 div(class="bold fs-10") ITEMS
               div(class="width-100 ") 
                 div(class="bold fs-10 ") HSN
@@ -920,7 +934,7 @@ body
                 div(class="bold fs-10 ") AMOUNT
             each val in lineItems
               div(class="flex")
-                div(class="flex-align width-100 pn pl-10") 
+                div(class="flex-align width-200 pn pl-10") 
                   div(class="fs-12") !{val.itemName}
                   div(class="fs-10 color-secondary") !{val.itemCode}
                 div(class="width-100 flex-align pn") 
@@ -999,7 +1013,7 @@ body
                   if invoiceJsonData.invoiceSignature[0]
                     div(class="mt-10")
                       img(src=invoiceJsonData.invoiceSignature[0] height="80px" width="170px ")
-                    div(class="fs-10 text-align-end width-50 pn mn") Authorised Signature
+                  div(class="fs-10 text-align-end width-50 pn mn position-absolute") Authorised Signature
 
 
                   

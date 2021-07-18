@@ -1,6 +1,6 @@
 const pug = require("pug");
 const fs = require("fs");
-const PdfService = require('./pdf-service')
+const PdfService = require("./pdf-service");
 // const orgJson = require('org.json')
 
 const orgJsonData = {
@@ -58,6 +58,7 @@ const orgJsonData = {
     ifscCode: "ICIC0000106",
     mobileNo: "9769468163",
     upiId: "decfin.riversys@icici",
+    bankName: "HDFC BANK, AKOLA HDFC BANK, AKOLA",
     upiQrCode:
       "iVBORw0KGgoAAAANSUhEUgAAAPUAAAD1AQAAAACgyo7IAAAChklEQVR4nO2YPY6DMBCFJ6Kg5Ai+SXIxJCNxseQmPgIlBcrse88EsrvSditPEQoL+FyMPT9vbPM/n9U+/MP/ly9mdlmy241/7jYmfI74aTkGz+4PcQw93sp6W8YkEIKPhr+d+3OYi118k/1JawrD3Qu593L7c9ii8SmtVxvN8UbX/7K/IZf/zXpYbYxPTt9+xkdDrvwZE4LgbfiZX+24nqUrcP2W+rsxUoG+16eWfGP+WNKb2eBlvWBN2Okcg89lvQ5T6pnfeEMSPc2SXYNw1kJmDazunPXHeuaUynkI3hW7cldhcEERVyQo3XMILtXD/q4Xn71mDfVlRSSE4JIWVh143dbdfgVBDsFpNVUPyI50H7kcD8GpL0wdJLRhEosQ6jdWEoTj6e+DXN9hEr1+457fz/hszllw0DVMCVk9czrLURBe9Y+D9GXYqj6f/m/PFQSwX9KSi5ZzxkdrrobBWMQ3DnOBSGPSIwh3+drsFQQbpe+tP2zNqX/0uko3DymlDmf9ac6hdV2Rw2sTu68px+BdeSXMlGolglz72V+35ui1dOCEwbX/qnIYheOBr9F/sWF4uR5y46e+NOXMb2ZNlRbOdKa2NjkCZ39N6eMhnvu7mUTGj/rTmNejyexMIor0yH/Y5KO/bc0zBVldA/pDU6dYRdCjcJmuo6dOAswf1KQhCN8vFDCJp84BmcS3uqYA3GstZP2eaiZJ+vq3/rApr60XCo6ujnR1KX0++pvWPCuXq/37qZNK/RYfbflY7z/MdLUA//dc01t/FoFT8BikxtZfyznuv0Jw2M8gWHX/8agnAY/B5X9e/S5dPek5lcYsCt+PTvrB1tB03XX2D435X8+Hf/i/8i/d6VAvhC/4xwAAAABJRU5ErkJggg==",
   },
@@ -188,7 +189,7 @@ let invoiceJson = {
       itemDescription: "paper 200gsm",
       itemHsnOrSac: "00564",
       itemId: "15c150",
-      itemName: "paper",
+      itemName: "paper paper paper paper paper description",
       itemPrice: "20",
       itemQty: 5,
       itemTax: 18,
@@ -341,10 +342,10 @@ let pharmaInvoiceJson = {
       taxableAmount: 100,
       batch: "b100",
       manufacturer: "lupin",
-      expiryDate: 1626171547739,
+      expiryDate: "25/06/2020",
     },
     {
-      lineNumber: "2",
+      lineNumber: "1",
       itemCode: "15c150",
       itemName: "paper",
       itemDescription: "paper 200gsm",
@@ -359,10 +360,10 @@ let pharmaInvoiceJson = {
       taxableAmount: 100,
       batch: "b100",
       manufacturer: "lupin",
-      expiryDate: 1626171547739,
+      expiryDate: "25/06/2020",
     },
     {
-      lineNumber: "3",
+      lineNumber: "1",
       itemCode: "15c150",
       itemName: "paper",
       itemDescription: "paper 200gsm",
@@ -377,10 +378,10 @@ let pharmaInvoiceJson = {
       taxableAmount: 100,
       batch: "b100",
       manufacturer: "lupin",
-      expiryDate: 1626171547739,
+      expiryDate: "25/06/2020",
     },
     {
-      lineNumber: "4",
+      lineNumber: "1",
       itemCode: "15c150",
       itemName: "paper",
       itemDescription: "paper 200gsm",
@@ -395,7 +396,115 @@ let pharmaInvoiceJson = {
       taxableAmount: 100,
       batch: "b100",
       manufacturer: "lupin",
-      expiryDate: 1626171547739,
+      expiryDate: "25/06/2020",
+    },
+    {
+      lineNumber: "1",
+      itemCode: "15c150",
+      itemName: "paper",
+      itemDescription: "paper 200gsm",
+      itemQty: 5,
+      uom: "EA",
+      itemPrice: "20",
+      discount: 0,
+      itemTax: 18,
+      itemAmount: "118",
+      itemHsnOrSac: "00564",
+      itemId: "15c150",
+      taxableAmount: 100,
+      batch: "b100",
+      manufacturer: "lupin",
+      expiryDate: "25/06/2020",
+    },
+    {
+      lineNumber: "1",
+      itemCode: "15c150",
+      itemName: "paper",
+      itemDescription: "paper 200gsm",
+      itemQty: 5,
+      uom: "EA",
+      itemPrice: "20",
+      discount: 0,
+      itemTax: 18,
+      itemAmount: "118",
+      itemHsnOrSac: "00564",
+      itemId: "15c150",
+      taxableAmount: 100,
+      batch: "b100",
+      manufacturer: "lupin",
+      expiryDate: "25/06/2020",
+    },
+    {
+      lineNumber: "1",
+      itemCode: "15c150",
+      itemName: "paper",
+      itemDescription: "paper 200gsm",
+      itemQty: 5,
+      uom: "EA",
+      itemPrice: "20",
+      discount: 0,
+      itemTax: 18,
+      itemAmount: "118",
+      itemHsnOrSac: "00564",
+      itemId: "15c150",
+      taxableAmount: 100,
+      batch: "b100",
+      manufacturer: "lupin",
+      expiryDate: "25/06/2020",
+    },
+    {
+      lineNumber: "1",
+      itemCode: "15c150",
+      itemName: "paper paper description",
+      itemDescription: "paper 200gsm",
+      itemQty: 5,
+      uom: "EA",
+      itemPrice: "20",
+      discount: 0,
+      itemTax: 18,
+      itemAmount: "118",
+      itemHsnOrSac: "00564",
+      itemId: "15c150",
+      taxableAmount: 100,
+      batch: "b100",
+      manufacturer: "lupin",
+      expiryDate: "25/06/2020",
+    },
+    {
+      lineNumber: "1",
+      itemCode: "15c150",
+      itemName: "paper",
+      itemDescription: "paper 200gsm",
+      itemQty: 5,
+      uom: "EA",
+      itemPrice: "20",
+      discount: 0,
+      itemTax: 18,
+      itemAmount: "118",
+      itemHsnOrSac: "00564",
+      itemId: "15c150",
+      taxableAmount: 100,
+      batch: "b100",
+      manufacturer: "lupin",
+      expiryDate: "25/06/2020",
+    },
+    {
+      lineNumber: "1",
+      itemCode: "15c150",
+      itemName: "paper",
+      itemDescription: "paper 200gsm",
+      itemQty: 5,
+      uom: "EA",
+      itemPrice: "20",
+      discount: 0,
+      itemTax: 18,
+      itemAmount: "118",
+      itemHsnOrSac: "00564",
+      itemId: "15c150",
+      taxableAmount: 100,
+      batch: "b100",
+      manufacturer: "lupin",
+      expiryDate: "25/06/2020",
     },
   ],
   modifiedOn: 1626285915920,
@@ -426,7 +535,7 @@ let pharmaInvoiceJson = {
   billType: "",
 };
 
-content = pug.renderFile("index.pug", {
+content = pug.renderFile("template.pug", {
   docUrl: docUrl,
   dochtml: dochtml,
   docName: docName,
@@ -470,12 +579,11 @@ content = pug.renderFile("index.pug", {
   lineItemsPharma: pharmaInvoiceJson.lineItems,
 });
 
-fs.writeFile("index_html.html", content, function (err, data) {
+fs.writeFile("template_html.html", content, function (err, data) {
   if (err) {
     return console.log(err);
   }
   console.log("hello");
 });
 
-PdfService.createPdf('A5')
-
+PdfService.createPdf("A5");
