@@ -406,8 +406,8 @@ content = pug.renderFile("template.pug", {
   orgJson: orgJsonData,
   invoiceJsonData: invoiceJson,
   uniqueTaxes: Object.entries(invoiceJson.uniqueTaxes),
-  pharmaInvoice: invoiceJson,
-  lineItemsPharma: invoiceJson.lineItems,
+  pharmaInvoice: pharmaInvoiceJson,
+  lineItemsPharma: pharmaInvoiceJson.lineItems,
   time: moment().format("HH:MM"),
 });
 
