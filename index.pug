@@ -844,7 +844,7 @@ html
             }
 
             .width-200 {
-                width: 300%
+                width: 350%
             }
 
             .position-absolute {
@@ -855,6 +855,10 @@ html
 
             .position-relative {
                 position: relative;
+            }
+
+            .table-height {
+              height: 330px;
             }
 
 body
@@ -925,36 +929,37 @@ body
                 div(class="width-100 ")
                     div(class="bold fs-10 ") QTY
                 div(class="width-100 ")
-                    div(class="bold fs-10 ") RATE/ITEM
+                    div(class="bold fs-10 ") RATE
                 div(class="width-100 ")
-                    div(class="bold fs-10 ") DISCOUNT
+                    div(class="bold fs-10 ") DISC.(%)
                 div(class="width-100 ")
                     div(class="bold fs-10 ") TAX
                 div(class="width-100 ")
-                    div(class="bold fs-10 ") AMOUNT
-            each val in lineItems
-                div(class="flex")
-                    div(class="flex-align width-200 pn pl-10")
-                        div(class="fs-12") !{val.itemName}
-                        div(class="fs-10 color-secondary") !{val.itemCode}
-                    div(class="width-100 flex-align pn")
-                        div(class="fs-10") !{val.itemHsnOrSac}
-                        div(class="width-100 ")
-                    div(class="width-100 flex-align pn")
-                        div(class="fs-10") !{val.itemQty}
-                        div(class="width-100 ")
-                    div(class="width-100 flex-align pn")
-                        div(class="fs-10") !{val.itemPrice}
-                        div(class="width-100 ")
-                    div(class="width-100 flex-align pn")
-                        div(class="fs-10") !{val.discount}
-                        div(class="width-100 ")
-                    div(class="width-100 flex-align pn")
-                        div(class="fs-10") !{val.taxableAmount}
-                        div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
-                    div(class="width-100 flex-align pn pr-10")
-                        div(class="fs-10") !{val.itemAmount}
-                        div(class="width-100 ")
+                    div(class="bold fs-10 ") AMT.
+            div(class="table-height")
+              each val in lineItems
+                  div(class="flex")
+                      div(class="flex-align width-200 pn pl-10")
+                          div(class="fs-12") !{val.itemName}
+                          div(class="fs-10 color-secondary") !{val.itemCode}
+                      div(class="width-100 flex-align pn")
+                          div(class="fs-10") !{val.itemHsnOrSac}
+                          div(class="width-100 ")
+                      div(class="width-100 flex-align pn")
+                          div(class="fs-10") !{val.itemQty}
+                          div(class="width-100 ")
+                      div(class="width-100 flex-align pn")
+                          div(class="fs-10") !{val.itemPrice}
+                          div(class="width-100 ")
+                      div(class="width-100 flex-align pn")
+                          div(class="fs-10") !{val.discount}
+                          div(class="width-100 ")
+                      div(class="width-100 flex-align pn")
+                          div(class="fs-10") !{val.taxableAmount}
+                          div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
+                      div(class="width-100 flex-align pn pr-10")
+                          div(class="fs-10") !{val.itemAmount}
+                          div(class="width-100 ")
             div(class="m-t-40 flex mt-10 black-border")
                 div(class="width-100 ")
                     div(class="bold fs-10")

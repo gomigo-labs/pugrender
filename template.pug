@@ -938,6 +938,11 @@ html
                 height: auto !important
             }
 
+            .table-height {
+              height: 220px;
+              border-bottom: 1px solid #000000
+            }
+
 body
     div(class="div-center")
         div(class="body-center height-100 width-100 monst bg-white pn")
@@ -1007,26 +1012,27 @@ body
                     div(class="bold fs-10 ") RATE
                 div(class="width-30 p-10 flex-center-center justify-content-start height-100 ")
                     div(class="bold fs-10 ") AMT.
-            each val in lineItemsPharma
+            div(class="table-height")        
+              each val in lineItemsPharma
                 div(class="flex height-auto border-bottom-1 pn")
-                    div(class="width-10 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
-                        div(class=" fs-8 text-secondary") !{val.lineNumber}
-                    div(class="width-150 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
-                        div(class="  fs-8  text-secondary") !{val.itemName}
-                    div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
-                        div(class="  fs-8  text-secondary") !{val.batch}
-                    div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
-                        div(class="  fs-8  text-secondary") !{val.manufacturer}
-                    div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
-                        div(class="  fs-8  text-secondary") !{val.expiryDate}
-                    div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
-                        div(class="  fs-8  text-secondary") !{val.discount}
-                    div(class="width-30 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
-                        div(class="  fs-8  text-secondary") !{val.itemQty}
-                    div(class="width-30 p-10 flex-center-center justify-content-start  height-100  border-right-1 ")
-                        div(class="  fs-8  text-secondary") !{val.itemPrice}
-                    div(class="width-30 p-10 flex-center-center justify-content-start  height-100 ")
-                        div(class="  fs-8  text-secondary") !{val.itemAmount}
+                  div(class="width-10 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                      div(class=" fs-8 text-secondary") !{val.lineNumber}
+                  div(class="width-150 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                      div(class="  fs-8  text-secondary") !{val.itemName}
+                  div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                      div(class="  fs-8  text-secondary") !{val.batch}
+                  div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                      div(class="  fs-8  text-secondary") !{val.manufacturer}
+                  div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                      div(class="  fs-8  text-secondary") !{val.expiryDate}
+                  div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                      div(class="  fs-8  text-secondary") !{val.discount}
+                  div(class="width-30 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                      div(class="  fs-8  text-secondary") !{val.itemQty}
+                  div(class="width-30 p-10 flex-center-center justify-content-start  height-100  border-right-1 ")
+                      div(class="  fs-8  text-secondary") !{val.itemPrice}
+                  div(class="width-30 p-10 flex-center-center justify-content-start  height-100 ")
+                      div(class="  fs-8  text-secondary") !{val.itemAmount}
             div(class="width-100 position-relative flex-container pn")
                 div(class="width-100 flex-container flex-direction-column justify-content-space-between")
                     div(class="bank-details") REMARKS: !{pharmaInvoice.termsAndConditions}
