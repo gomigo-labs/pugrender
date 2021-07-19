@@ -1,6 +1,7 @@
 const pug = require("pug");
 const fs = require("fs");
 const PdfService = require("./pdf-service");
+const moment =require('moment')
 // const orgJson = require('org.json')
 
 const orgJsonData = {
@@ -78,41 +79,8 @@ const orgJsonData = {
 };
 
 //variables
-let content,
-  docName,
-  dochtml,
-  docUrl,
-  apphtml,
-  appLink,
-  organization,
-  organizationNo,
-  organizationGSTIN,
-  invoiceNumber,
-  dueDate,
-  lineItems,
-  accountNumber,
-  ifscCode,
-  bankName,
-  customerUpiId,
-  taxableAmount,
-  orderNo,
-  billingAddressLine1,
-  billingAddressLine2,
-  shippingAddressLine1,
-  shippingAddressLine2,
-  billingState,
-  shippingState,
-  shippingZipCode,
-  billingZipCode,
-  customerGSTIN,
-  isIGST,
-  invoiceQr,
-  orgJson,
-  uniqueTaxes,
-  invoiceJsonData,
-  pharmaInvoice,
-  lineItemsPharma,
-  description;
+let content
+
 
 let invoiceJson = {
   addedOn: 1626171809083,
@@ -535,47 +503,21 @@ let pharmaInvoiceJson = {
 };
 
 content = pug.renderFile("template.pug", {
-  docUrl: docUrl,
-  dochtml: dochtml,
-  docName: docName,
-  apphtml: apphtml,
-  appLink: appLink,
   title: invoiceJson.invoiceNumber,
-  description: "test",
-  footer: "test",
   GSTIN: invoiceJson.customerGSTIN,
-  organizationNo: invoiceJson.organizationNo,
-  organizationGSTIN: invoiceJson.organizationGSTIN,
+  organizationNo: invoiceJson.organizationNo || " ",
   invoiceNumber: invoiceJson.invoiceNumber,
-  invoiceDate: invoiceJson.invoiceDate,
-  dueDate: invoiceJson.dueDate,
+  invoiceDate: moment(invoiceJson.invoiceDate).format("DD/MM/YYYY"),
+  dueDate: moment(invoiceJson.dueDate).format("DD/MM/YYYY"),
   lineItems: invoiceJson.lineItems,
-  accountNumber: invoiceJson.invoiceBankDetails.accountNumber,
-  ifscCode: invoiceJson.invoiceBankDetails.ifscCode,
-  bankName: invoiceJson.invoiceBankDetails.bankName,
-  customerUpiId: invoiceJson.customerUpiId,
   taxableAmount: invoiceJson.taxableAmount,
-  orderNo: invoiceJson.orderNo,
-  billingAddressLine1: invoiceJson.customerAddress.billingAddress.addressLine1,
-  billingAddressLine2: invoiceJson.customerAddress.billingAddress.addressLine2,
-  shippingAddressLine1:
-    invoiceJson.customerAddress.shippingAddress.addressLine1,
-  shippingAddressLine2:
-    invoiceJson.customerAddress.shippingAddress.addressLine2,
-  shippingState: invoiceJson.customerAddress.shippingAddress.state,
-  shippingZipCode: invoiceJson.customerAddress.shippingAddress.zipCode,
-  billingState: invoiceJson.customerAddress.billingAddress.state,
-  billingZipCode: invoiceJson.customerAddress.billingAddress.zipCode,
-  customerGSTIN: invoiceJson.customerGSTIN,
-  isIGST:
-    invoiceJson.customerGSTIN.slice(0, 2) ===
-    invoiceJson.organizationGSTIN.slice(0, 2),
   invoiceQr: invoiceJson.invoiceQr,
   orgJson: orgJsonData,
   invoiceJsonData: invoiceJson,
   uniqueTaxes: Object.entries(invoiceJson.uniqueTaxes),
-  pharmaInvoice: pharmaInvoiceJson,
-  lineItemsPharma: pharmaInvoiceJson.lineItems,
+  pharmaInvoice: invoiceJson,
+  lineItemsPharma: invoiceJson.lineItems,
+  time: moment().format("HH:MM")
 });
 
 fs.writeFile("template_html.html", content, function (err, data) {
