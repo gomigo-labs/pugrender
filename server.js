@@ -287,7 +287,6 @@ let pharmaInvoiceJson = {
   customerEmail: "",
   customerGSTIN: "27AAACB2902M1ZT",
   customerId: "419ff561",
-  customerName: "BHARAT PETROLEUM CORPORATION LIMITED",
   customerNotes: "",
   customerNumber: "",
   customerUpiId: "",
@@ -512,7 +511,7 @@ let pharmaInvoiceJson = {
   organizationGSTIN: "07AAKCR1346R1ZR",
   paymentTerms: "Due in 30 days",
   doctorName: "Dr. Shaktimaan",
-  patientName: "Elon Musk",
+  customerName: "Elon Musk",
   PK: "14365c3b4220abd6",
   SK: " ",
   tax: {
