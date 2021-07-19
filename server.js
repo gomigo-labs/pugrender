@@ -393,7 +393,7 @@ let pharmaInvoiceJson = {
   billType: "",
 };
 
-content = pug.renderFile("index.pug", {
+content = pug.renderFile("template.pug", {
   title: invoiceJson.invoiceNumber,
   GSTIN: invoiceJson.customerGSTIN,
   organizationNo: invoiceJson.organizationNo || " ",
@@ -411,11 +411,11 @@ content = pug.renderFile("index.pug", {
   time: moment().format("HH:MM"),
 });
 
-fs.writeFile("index_html.html", content, function (err, data) {
+fs.writeFile("template_html.html", content, function (err, data) {
   if (err) {
     return console.log(err);
   }
   console.log("hello");
 });
 
-PdfService.createPdf("A4");
+PdfService.createPdf("A5");
