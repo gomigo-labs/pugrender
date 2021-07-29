@@ -867,7 +867,7 @@ body
             div(class="flex-container")
                 if invoiceJsonData.invoiceLogo
                     div(class="br-1")
-                        img(src=invoiceJsonData.invoiceLogo.url height="135px" width="135px ")
+                        img(src=invoiceJsonData.invoiceLogo height="135px" width="135px ")
                 div(class=" width-100")
                     div(class="monst mt-10")
                         span(class="go") !{orgJson.businessName}
@@ -1021,7 +1021,7 @@ body
                         div(class="fs-12-lh-20 text-align-end width-50 border-top pn") ₹ !{Number(invoiceJsonData.amount || 0).toFixed(2)}
                     if invoiceJsonData.invoiceSignature
                         div(class="mt-10")
-                            img(src=invoiceJsonData.invoiceSignature.url height="60px" width="170px ")
+                            img(src=invoiceJsonData.invoiceSignature height="60px" width="170px ")
                     div(class="fs-10 text-align-end width-50 pn mn position-absolute") Authorised Signature
 
 
