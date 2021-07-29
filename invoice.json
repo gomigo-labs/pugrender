@@ -58,12 +58,36 @@
   },
   "invoiceDate":1623655669000,
   "invoiceId":"1c3cf5d9034960d1",
-  "invoiceLogo":"https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png",
+  "invoiceLogo":{
+    "addedBy":"",
+    "addedOn":1626171547739,
+    "fileType":"application/pdf",
+    "isActive":1,
+    "isDeleted":0,
+    "modifiedBy":"",
+    "modifiedOn":1626171547739,
+    "name":"INV1000",
+    "path":"tenants/skull/file-uploader",
+    "sourceFileName":"tenants/skull/file-uploader/1626171547497_kuy30QwLmb.blob",
+    "url":"https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+  },
   "invoiceNumber":"GOM1236",
   "invoiceObject":{
 
   },
-  "invoiceSignature":"https://www.freepnglogos.com/uploads/signature-png/signature-sadhguru-9.png",
+  "invoiceSignature":{
+    "addedBy":"",
+    "addedOn":1626171547739,
+    "fileType":"application/pdf",
+    "isActive":1,
+    "isDeleted":0,
+    "modifiedBy":"",
+    "modifiedOn":1626171547739,
+    "name":"INV1000",
+    "path":"tenants/skull/file-uploader",
+    "sourceFileName":"tenants/skull/file-uploader/1626171547497_kuy30QwLmb.blob",
+    "url":"https://www.freepnglogos.com/uploads/signature-png/signature-sadhguru-9.png"
+  },
   "invoiceStatus":"Unpaid",
   "invoiceSubject":"invoice for paper products",
   "isDraft":0,

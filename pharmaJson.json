@@ -59,7 +59,19 @@
     "sourceFileName":"tenants/skull/file-uploader/1626171547497_kuy30QwLmb.blob",
     "url":"https://app.gomigo.io:3006/get?fileName=gomigo-dev/tenants/skull/file-uploader/1626171547497_kuy30QwLmb.blob"
   },
-  "invoiceSignature":"https://www.freepnglogos.com/uploads/signature-png/signature-sadhguru-9.png",
+  "invoiceSignature":{
+    "addedBy":"",
+    "addedOn":1626171547739,
+    "fileType":"application/pdf",
+    "isActive":1,
+    "isDeleted":0,
+    "modifiedBy":"",
+    "modifiedOn":1626171547739,
+    "name":"INV1000",
+    "path":"tenants/skull/file-uploader",
+    "sourceFileName":"tenants/skull/file-uploader/1626171547497_kuy30QwLmb.blob",
+    "url":"https://www.freepnglogos.com/uploads/signature-png/signature-sadhguru-9.png"
+  },
   "invoiceStatus":"Unpaid",
   "invoiceSubject":"test",
   "isDraft":0,
@@ -97,7 +109,6 @@
       "itemHsnOrSac":"00564",
       "itemId":"15c150",
       "taxableAmount":100,
-      "batch":"b100",
       "manufacturer":"lupin",
       "expiryDate":"25/06/2020"
     },
