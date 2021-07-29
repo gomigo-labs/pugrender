@@ -866,7 +866,7 @@ body
     div(class="div-center bg-f7f7f7")
         div(class="body-center height-100 width-85 monst bg-white position-relative")
             div(class="flex-container")
-                if invoiceJsonData.invoiceLogo
+                if invoiceJsonData.invoiceLogo && invoiceJsonData.invoiceLogo.length > 0
                     div(class="br-1")
                         img(src=invoiceJsonData.invoiceLogo height="135px" width="135px ")
                 div(class=" width-100")
@@ -1020,7 +1020,7 @@ body
                     div(class="flex-container pn width-50")
                         div(class="fs-12-lh-20 text-align-end width-50 border-top pn") BALANCE AMOUNT
                         div(class="fs-12-lh-20 text-align-end width-50 border-top pn") ₹ !{Number(invoiceJsonData.amount || 0).toFixed(2)}
-                    if invoiceJsonData.invoiceSignature
+                    if invoiceJsonData.invoiceSignature && invoiceJsonData.invoiceSignature.length
                         div(class="mt-10")
                             img(src=invoiceJsonData.invoiceSignature height="60px" width="170px ")
                     div(class="fs-10 text-align-end width-50 pn mn position-absolute") Authorised Signature
