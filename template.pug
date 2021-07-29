@@ -701,6 +701,11 @@ html
                 border-right: 1px solid #000000;
             }
 
+            .height-20 {
+
+                height: 20px;
+            }
+
             .go {
                 font-family: "Montserrat", sans-serif !important;
                 font-size: 16px;
@@ -927,7 +932,7 @@ html
             }
 
             .width-10 {
-                width: 14% !important;
+                width: 16% !important;
             }
 
             .width-150 {
@@ -936,6 +941,10 @@ html
 
             .height-auto {
                 height: auto !important
+            }
+
+            .pr-0 {
+              padding-right: 0;
             }
 
 body
@@ -958,12 +967,6 @@ body
                     div(class="flex-container width-100 pn")
                         div(class="fs-12-lh-20 color-secondary pr-10") PATIENT:
                         div(class="fs-12-lh-20") !{pharmaInvoice.customerName}
-                    //- div(class="flex-container width-100 pn")
-                    //-   div(class="fs-12-lh-20 color-secondary pr-10") ADDRESS:
-                    //-   div(class="fs-12-lh-20") !{pharmaInvoice.invoiceNumber}
-                    //- div(class="flex-container width-100 pn")
-                    //-   div(class="fs-12-lh-20 color-secondary pr-10") MOBILE:
-                    //-   div(class="fs-12-lh-20") !{pharmaInvoice.invoiceNumber}
                     div(class="flex-container width-100 pn")
                         div(class="fs-12-lh-20 color-secondary pr-10") DOCTOR:
                         div(class="fs-12-lh-20") !{pharmaInvoice.doctorName}
@@ -993,7 +996,7 @@ body
                     div(class="bold fs-10 ") NO.
                 div(class="width-150 p-10 flex-center-center justify-content-start height-100 border-right-1 ")
                     div(class="bold fs-10 ") ITEM NAME
-                div(class="width-40 p-10 flex-center-center justify-content-start height-100 border-right-1 ")
+                div(class="width-45 p-10 flex-center-center justify-content-start height-100 border-right-1 ")
                     div(class="bold fs-10 ") BATCH
                 div(class="width-45 p-10 flex-center-center justify-content-start height-100 border-right-1 ")
                     div(class="bold fs-10 ") MFG.
@@ -1005,29 +1008,30 @@ body
                     div(class="bold fs-10 ") QTY.
                 div(class="width-30 p-10 flex-center-center justify-content-start height-100  border-right-1 ")
                     div(class="bold fs-10 ") RATE
-                div(class="width-30 p-10 flex-center-center justify-content-start height-100 ")
+                div(class="width-45 p-10 flex-center-center justify-content-start height-100 ")
                     div(class="bold fs-10 ") AMT.
             div(class="table-height")        
               each val in lineItemsPharma
                 div(class="flex height-auto border-bottom-1 pn")
-                  div(class="width-10 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                  div(class="width-10 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class=" fs-8 text-secondary") !{val.lineNumber}
-                  div(class="width-150 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                  div(class="width-150 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.itemName}
-                  div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                  div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.batch}
-                  div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                  div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
+      
                       div(class="  fs-8  text-secondary") !{val.manufacturer}
-                  div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                  div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.expiryDate}
-                  div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                  div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.discount}
-                  div(class="width-30 p-10 flex-center-center justify-content-start  height-100 border-right-1 ")
+                  div(class="width-30 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.itemQty}
-                  div(class="width-30 p-10 flex-center-center justify-content-start  height-100  border-right-1 ")
+                  div(class="width-30 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.itemPrice}
-                  div(class="width-30 p-10 flex-center-center justify-content-start  height-100 ")
-                      div(class="  fs-8  text-secondary") !{val.itemAmount}
+                  div(class="width-45 p-10 flex-center-center justify-content-start  height-100 ")
+                      div(class="  fs-8  text-secondary") !{Number(val.itemAmount).toFixed(2)}
             div(class="width-100 position-relative flex-container pn")
                 div(class="width-100 flex-container flex-direction-column justify-content-space-between")
                     div(class="bank-details") REMARKS: !{pharmaInvoice.termsAndConditions}
@@ -1044,18 +1048,22 @@ body
                 div(class="width-45 border-right-1  flex-container flex-direction-column align-items-end")
                     div(class="flex-container flex-direction-column justify-content-space-between pn width-50 height-100px")
                         span(class="fs-12-lh-20 bold") for: !{orgJson.organizationAccount.accountName}
-                        if invoiceJsonData.invoiceSignature[0]
+                        if pharmaInvoice.invoiceSignature
                             div(class="mt-10")
-                                img(src=invoiceJsonData.invoiceSignature[0] height="60px" width="120px ")
+                                img(src=pharmaInvoice.invoiceSignature height="50px" width="150px ")
                         div(class="fs-10 text-secondary width-100 pn mn white-space-nowrap") Registered pharmacist sign
                 div(class="width-35 total")
+                    div()
+                      div(class="flex-container width-50 pr-0")
+                          div(class="fs-10  width-50 pn") SUBTOTAL:
+                          div(class="fs-10 text-align-end width-50 pn") ₹ !{Number(lineItemsPharma.reduce((acc,obj) => acc + Number(obj.itemAmount), 0) || 0).toFixed(2)}
+                      each val in uniqueTaxes
+                        div(class="flex-container pn width-50")
+                          div(class="fs-12-lh-20 text-align-end width-100 pn") !{val[0]}:
+                          div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{Number(val[1] || 0).toFixed(2)}
                     div(class="flex-container width-50")
-                        div(class="fs-10  width-50 pn") SUBTOTAL:
-                        div(class="fs-10 text-align-end width-50 pn") ₹ !{Number(lineItemsPharma.reduce((acc,obj) => acc + Number(obj.itemAmount), 0) || 0).toFixed(2)}
-                    div(class="flex-container width-50")
-                    div(class="flex-container width-50")
-                        div(class="fs-12 bold width-50 pn") TOTAL:
-                        div(class="fs-12 bold text-align-end width-50 pn") ₹ !{Number(lineItemsPharma.reduce((acc,obj) => acc + Number(obj.itemAmount), 0) || 0).toFixed(2)}
+                        div(class="fs-10 bold width-50 pn") TOTAL:
+                        div(class="fs-10 bold text-align-end width-50 pn") ₹ !{Number(lineItemsPharma.reduce((acc,obj) => acc + Number(obj.itemAmount), 0) || 0).toFixed(2)}
 
 
 
