@@ -139,10 +139,12 @@ let invoiceJson = {
   },
   invoiceDate: 1623655669000,
   invoiceId: "1c3cf5d9034960d1",
-  invoiceLogo: {},
+  invoiceLogo:
+    "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png",
   invoiceNumber: "GOM1236",
   invoiceObject: {},
-  invoiceSignature: {},
+  invoiceSignature:
+    "https://www.freepnglogos.com/uploads/signature-png/signature-sadhguru-9.png",
   invoiceStatus: "Unpaid",
   invoiceSubject: "invoice for paper products",
   isDraft: 0,
@@ -394,7 +396,7 @@ let pharmaInvoiceJson = {
   billType: "",
 };
 
-content = pug.renderFile("template.pug", {
+content = pug.renderFile("index.pug", {
   title: invoiceJson.invoiceNumber,
   GSTIN: invoiceJson.customerGSTIN,
   organizationNo: invoiceJson.organizationNo || " ",
@@ -412,11 +414,11 @@ content = pug.renderFile("template.pug", {
   time: moment().format("HH:MM"),
 });
 
-fs.writeFile("template_html.html", content, function (err, data) {
+fs.writeFile("index_html.html", content, function (err, data) {
   if (err) {
     return console.log(err);
   }
   console.log("hello");
 });
 
-PdfService.createPdf("A5");
+PdfService.createPdf("A4");
