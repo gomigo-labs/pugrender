@@ -997,7 +997,7 @@ body
                 div(class="width-150 p-10 flex-center-center justify-content-start height-100 border-right-1 ")
                     div(class="bold fs-10 ") ITEM NAME
                 div(class="width-45 p-10 flex-center-center justify-content-start height-100 border-right-1 ")
-                    div(class="bold fs-10 ") BATCH
+                    div(class="bold fs-10 ") BATCH / SERIAL No.
                 div(class="width-45 p-10 flex-center-center justify-content-start height-100 border-right-1 ")
                     div(class="bold fs-10 ") MFG.
                 div(class="width-45 p-10 flex-center-center justify-content-start height-100 border-right-1 ")
@@ -1017,8 +1017,15 @@ body
                       div(class=" fs-8 text-secondary") !{val.lineNumber}
                   div(class="width-150 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.itemName}
-                  div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
+                  if val.batch
+                    div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.batch}
+                  if val.serialNumbers
+                    div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
+                      div(class="  fs-8  text-secondary") !{val.serialNumbers[0]}
+                  if !val.serialNumbers && !val.batch
+                    div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
+                      div(class="  fs-8  text-secondary") 
                   div(class="width-45 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
       
                       div(class="  fs-8  text-secondary") !{val.manufacturer}
@@ -1050,7 +1057,7 @@ body
                         span(class="fs-12-lh-20 bold") for: !{orgJson.organizationAccount.accountName}
                         if pharmaInvoice.invoiceSignature
                             div(class="mt-10")
-                                img(src=pharmaInvoice.invoiceSignature height="50px" width="150px ")
+                                img(src=pharmaInvoice.invoiceSignature.url height="50px" width="150px ")
                         div(class="fs-10 text-secondary width-100 pn mn white-space-nowrap") Registered pharmacist sign
                 div(class="width-35 total")
                     div()
