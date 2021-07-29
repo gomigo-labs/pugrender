@@ -1,21 +1,18 @@
 const pug = require("pug");
 const fs = require("fs");
 const PdfService = require("./pdf-service");
-const httpService = require('./http-service')
+const httpService = require("./http-service");
 const moment = require("moment");
-const base64Img = require('base64-img');
-const { httpConstants } = require('./common/constants');
-const orgJsonData = require('./org.json');
+const base64Img = require("base64-img");
+const { httpConstants } = require("./common/constants");
+const orgJsonData = require("./org.json");
 
 //variables
 let content;
 
-let invoiceJson = require('./invoice.json')
+let invoiceJson = require("./invoice.json");
 
-let pharmaInvoiceJson = require('./pharmaJson.json');
-
-
-
+let pharmaInvoiceJson = require("./pharmaJson.json");
 
 content = pug.renderFile("index.pug", {
   title: invoiceJson.invoiceNumber,
@@ -34,7 +31,6 @@ content = pug.renderFile("index.pug", {
   lineItemsPharma: pharmaInvoiceJson.lineItems,
   time: moment().format("HH:MM"),
 });
-
 
 fs.writeFile("index_html.html", content, function (err, data) {
   if (err) {
