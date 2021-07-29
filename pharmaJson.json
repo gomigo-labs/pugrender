@@ -1,0 +1,168 @@
+{
+  "addedOn":1626285915920,
+  "additionalCharges":[
+
+  ],
+  "amount":47.67,
+  "amountPaid":0,
+  "contactPerson":{
+    "contactName":"ets",
+    "contactPersonEmail":"man6399@gmail.com",
+    "contactPersonId":"",
+    "contactPersonNumber":"5666004156"
+  },
+  "currency":"INR",
+  "customerAddress":{
+    "addressLine1":"",
+    "addressLine2":"",
+    "attention":"",
+    "city":"",
+    "country":"",
+    "phoneNumber":"",
+    "pincode":"",
+    "state":""
+  },
+  "customerEmail":"",
+  "customerGSTIN":"27AAACB2902M1ZT",
+  "customerId":"419ff561",
+  "customerNotes":"",
+  "customerNumber":"",
+  "customerUpiId":"",
+  "discount":{
+    "discountAmount":"",
+    "discountDescription":""
+  },
+  "documents":[
+    ""
+  ],
+  "dueDate":1626171538000,
+  "invoiceBankDetails":{
+    "accountName":"Riversys Technologies Ltd",
+    "accountNumber":"462515003100000001",
+    "bankName":"ICICI BANK RPC DELHI",
+    "ifscCode":"ICIC0000106"
+  },
+  "invoiceDate":1626171538000,
+  "invoiceId":"14365c3b4220abd6",
+  "invoiceLogo":"",
+  "invoiceNumber":"INV000000001",
+  "invoiceObject":{
+    "addedBy":"",
+    "addedOn":1626171547739,
+    "fileType":"application/pdf",
+    "isActive":1,
+    "isDeleted":0,
+    "modifiedBy":"",
+    "modifiedOn":1626171547739,
+    "name":"INV1000",
+    "path":"tenants/skull/file-uploader",
+    "sourceFileName":"tenants/skull/file-uploader/1626171547497_kuy30QwLmb.blob",
+    "url":"https://app.gomigo.io:3006/get?fileName=gomigo-dev/tenants/skull/file-uploader/1626171547497_kuy30QwLmb.blob"
+  },
+  "invoiceSignature":"https://www.freepnglogos.com/uploads/signature-png/signature-sadhguru-9.png",
+  "invoiceStatus":"Unpaid",
+  "invoiceSubject":"test",
+  "isDraft":0,
+  "isSent":0,
+  "lineItems":[
+    {
+      "lineNumber":"1",
+      "itemCode":"15c150",
+      "itemName":"paper",
+      "itemDescription":"paper 200gsm",
+      "itemQty":5,
+      "uom":"EA",
+      "itemPrice":"20",
+      "discount":0,
+      "itemTax":18,
+      "itemAmount":"11856.4564646444644",
+      "itemHsnOrSac":"00564",
+      "itemId":"15c150",
+      "taxableAmount":100,
+      "batch":"b100",
+      "manufacturer":"",
+      "expiryDate":"25/06/2020"
+    },
+    {
+      "lineNumber":"1",
+      "itemCode":"15c150",
+      "itemName":"paper paper  description description",
+      "itemDescription":"paper 200gsm",
+      "itemQty":5,
+      "uom":"EA",
+      "itemPrice":"20",
+      "discount":0,
+      "itemTax":18,
+      "itemAmount":"118",
+      "itemHsnOrSac":"00564",
+      "itemId":"15c150",
+      "taxableAmount":100,
+      "batch":"b100",
+      "manufacturer":"lupin",
+      "expiryDate":"25/06/2020"
+    },
+    {
+      "lineNumber":"1",
+      "itemCode":"15c150",
+      "itemName":"paper",
+      "itemDescription":"paper 200gsm",
+      "itemQty":5,
+      "uom":"EA",
+      "itemPrice":"20",
+      "discount":0,
+      "itemTax":18,
+      "itemAmount":"118",
+      "itemHsnOrSac":"00564",
+      "itemId":"15c150",
+      "taxableAmount":100,
+      "batch":"b100",
+      "manufacturer":"lupin",
+      "expiryDate":"25/06/2020"
+    },
+    {
+      "lineNumber":"1",
+      "itemCode":"15c150",
+      "itemName":"paper",
+      "itemDescription":"paper 200gsm",
+      "itemQty":5,
+      "uom":"EA",
+      "itemPrice":"20",
+      "discount":0,
+      "itemTax":18,
+      "itemAmount":"118",
+      "itemHsnOrSac":"00564",
+      "itemId":"15c150",
+      "taxableAmount":100,
+      "batch":"b100",
+      "manufacturer":"lupin",
+      "expiryDate":"25/06/2020"
+    }
+  ],
+  "modifiedOn":1626285915920,
+  "businessName":"Riversys Technologies Ltd",
+  "orderNo":"TEST",
+  "organizationGSTIN":"07AAKCR1346R1ZR",
+  "paymentTerms":"Due in 30 days",
+  "doctorName":"Dr. Shaktimaan",
+  "customerName":"Elon Musk",
+  "PK":"14365c3b4220abd6",
+  "SK":" ",
+  "tax":{
+    "CGST":{
+      "taxAmount":"12",
+      "taxCharge":"9%"
+    },
+    "IGST":{
+      "taxAmount":"12",
+      "taxCharge":"9%"
+    },
+    "SGST":{
+      "taxAmount":"12",
+      "taxCharge":"9%"
+    }
+  },
+  "taxableAmount":"40.40",
+  "tenantId":"skull-dev",
+  "termsAndConditions":"Some Terms and condition",
+  "billType":""
+}
