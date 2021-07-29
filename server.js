@@ -327,7 +327,8 @@ let pharmaInvoiceJson = {
       itemHsnOrSac: "00564",
       itemId: "15c150",
       taxableAmount: 100,
-      batch: "b100",
+      // batch: "b100",
+      // serialNumbers: ["s12554454", "s024545454", "546546545646"],
       manufacturer: "lupin",
       expiryDate: "25/06/2020",
     },
@@ -397,7 +398,7 @@ let pharmaInvoiceJson = {
   billType: "",
 };
 
-content = pug.renderFile("index.pug", {
+content = pug.renderFile("template.pug", {
   title: invoiceJson.invoiceNumber,
   GSTIN: invoiceJson.customerGSTIN,
   organizationNo: invoiceJson.organizationNo || " ",
@@ -415,11 +416,11 @@ content = pug.renderFile("index.pug", {
   time: moment().format("HH:MM"),
 });
 
-fs.writeFile("index_html.html", content, function (err, data) {
+fs.writeFile("template_html.html", content, function (err, data) {
   if (err) {
     return console.log(err);
   }
   console.log("hello");
 });
 
-PdfService.createPdf("A4");
+PdfService.createPdf("A5");
