@@ -1,12 +1,12 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
-const imageToBase64 = require('image-to-base64');
+const imageToBase64 = require("image-to-base64");
 
 const createPdf = async (format) => {
   const browser = await puppeteer.launch({
     headless: true,
   });
-  let htmlContent = fs.readFileSync(`./index_html.html`, "utf8");
+  let htmlContent = fs.readFileSync(`./template_html.html`, "utf8");
 
   const page = await browser.newPage();
 
@@ -17,28 +17,23 @@ const createPdf = async (format) => {
   await page.pdf({
     format: format,
     path: `my-invoice.pdf`,
-    landscape: false,
+    landscape: true,
   });
 
   await browser.close();
 };
 
-const createBase64 =  (url) =>{
-  let image
+const createBase64 = (url) => {
+  let image;
   imageToBase64(url) // Path to the image
-      .then(
-          (response) => {
-            return response; // "cGF0aC90by9maWxlLmpwZw=="
-          }
-      )
-      .catch(
-          (error) => {
-            console.log(error); // Logs an error if there was one
-          }
-      )
+    .then((response) => {
+      return response; // "cGF0aC90by9maWxlLmpwZw=="
+    })
+    .catch((error) => {
+      console.log(error); // Logs an error if there was one
+    });
 
-  return image
-
-}
+  return image;
+};
 
 module.exports = { createPdf };
