@@ -963,7 +963,7 @@ body
                           div(class="fs-10") !{val.discount}
                           div(class="width-100 ")
                       div(class="width-100 flex-align pn")
-                          div(class="fs-10") !{val.itemAmount - val.taxableAmount}
+                          div(class="fs-10") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
                           div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
                       div(class="width-100 flex-align pn pr-10")
                           div(class="fs-10") !{val.itemAmount}
