@@ -81,7 +81,7 @@
       "taxableAmount":100,
       "batch":"b100",
       "manufacturer":"",
-      "expiryDate":"25/06/2020"
+      "expiryDate":"06/20"
     },
     {
       "lineNumber":"1",
@@ -98,7 +98,25 @@
       "itemId":"15c150",
       "taxableAmount":100,
       "manufacturer":"lupin",
-      "expiryDate":"25/06/2020"
+      "expiryDate":"06/20"
+    },
+    {
+      "lineNumber":"1",
+      "itemCode":"15c150",
+      "itemName":"paper",
+      "itemDescription":"paper 200gsm",
+      "itemQty":5,
+      "uom":"EA",
+      "itemPrice":"20",
+      "discount":0,
+      "itemTax":18,
+      "itemAmount":"118",
+      "itemHsnOrSac":"00564",
+      "itemId":"15c150",
+      "taxableAmount":100,
+      "batch":"b100000000",
+      "manufacturer":"lupin",
+      "expiryDate":"06/20"
     },
     {
       "lineNumber":"1",
@@ -116,25 +134,7 @@
       "taxableAmount":100,
       "batch":"b100",
       "manufacturer":"lupin",
-      "expiryDate":"25/06/2020"
-    },
-    {
-      "lineNumber":"1",
-      "itemCode":"15c150",
-      "itemName":"paper",
-      "itemDescription":"paper 200gsm",
-      "itemQty":5,
-      "uom":"EA",
-      "itemPrice":"20",
-      "discount":0,
-      "itemTax":18,
-      "itemAmount":"118",
-      "itemHsnOrSac":"00564",
-      "itemId":"15c150",
-      "taxableAmount":100,
-      "batch":"b100",
-      "manufacturer":"lupin",
-      "expiryDate":"25/06/2020"
+      "expiryDate":"06/20"
     }
   ],
   "modifiedOn":1626285915920,
