@@ -958,7 +958,7 @@ body
                     div(class="text-secondary width-90-per") !{invoiceJsonData.customerAddress.billingAddress.addressLine1},
                   if invoiceJsonData.customerAddress.billingAddress.addressLine2
                     div(class="text-secondary width-90-per") !{invoiceJsonData.customerAddress.billingAddress.addressLine2},
-                  div() !{invoiceJsonData.customerAddress.billingAddress.state}, !{invoiceJsonData.customerAddress.billingAddress.zipCode}
+                  div() !{invoiceJsonData.customerAddress.billingAddress.state}, !{invoiceJsonData.customerAddress.billingAddress.pinCode}
 
               div(class="width-100 flex-container")
                 div(class="width-100 ph-10 text-secondary")
@@ -968,7 +968,7 @@ body
                     div(class="text-secondary width-90-per") !{invoiceJsonData.customerAddress.shippingAddress.addressLine1},
                   if invoiceJsonData.customerAddress.shippingAddress.addressLine2
                     div(class="text-secondary width-90-per") !{invoiceJsonData.customerAddress.shippingAddress.addressLine2},
-                  div(class="text-secondary") !{invoiceJsonData.customerAddress.shippingAddress.state}, !{invoiceJsonData.customerAddress.shippingAddress.zipCode}
+                  div(class="text-secondary") !{invoiceJsonData.customerAddress.shippingAddress.state}, !{invoiceJsonData.customerAddress.shippingAddress.pinCode}
                   div(class="flex-container pn")
                     div(class="text-secondary pr-10 bold width-30") GSTIN:
                     div(class="text-secondary") !{invoiceJsonData.customerGSTIN}
