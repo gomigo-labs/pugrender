@@ -918,6 +918,45 @@ html
             .pt-5 {
               padding-top: 5px
             }
+            .mb-5 {
+              margin-bottom: 5px
+            }
+
+            .mt-5 {
+              margin-top: 5px
+            }
+
+            .hsn-table {
+              font-size: 10px;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              padding-left: 10px;
+            }
+
+            .bt-n {
+              border-top: none
+            }
+            .h-30 {
+              height: 30px
+            }
+
+            .mb-5 {
+              margin-bottom: 5px;
+            }
+
+            .num-to-eng {
+              display: flex;
+              justify-content: space-evenly;
+              flex-direction: column;
+              height: 40px;
+              padding-left: 10px;
+              box-sizing: border-box;
+            }
+
+            .p-10 {
+              padding:10px;
+            }
 
 body
     div(class="div-center")
@@ -998,7 +1037,7 @@ body
                           div(class="fs-10") !{val.itemName}
                           div(class="fs-10 color-secondary") !{val.itemCode}
                       div(class="width-100 flex-align pn")
-                          div(class="fs-10") !{val.itemHsnOrSac}
+                          div(class="fs-10") !{val.itemHsnOrSac || "-" }
                           div(class="width-100 ")
                       div(class="width-100 flex-align pn")
                           div(class="fs-10") !{val.itemQty}
@@ -1016,7 +1055,7 @@ body
                           div(class="fs-10") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
                           div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
                       div(class="width-100 flex-align pn pr-10")
-                          div(class="fs-10") !{val.itemAmount}
+                          div(class="fs-10") !{Number(val.itemAmount).toFixed(2)}
                           div(class="width-100 ")
 
             div(class="flex height-30 br-1 bt-none bg-grey")
@@ -1039,7 +1078,7 @@ body
 
             div(class="flex height-30 br-1 bt-none")
                 div(class="width-200 ")
-                    div(class="bold fs-10") Receive Amount
+                    div(class="bold fs-10") Received Amount
                 div(class="width-100 ")
                     div(class="bold fs-10 ")
                 div(class="width-100 ")
@@ -1073,65 +1112,97 @@ body
                 div(class="width-100 ")
                     div(class="bold fs-10 ") ₹ !{lineItems.reduce((acc, obj) => acc + Number(obj.itemAmount), 0).toFixed(2)}
              
-            div(class="flex br-1 mt-10 bg-grey ")
-                div(class="width-100")
-                    div(class="bold fs-10 ") HSN/SAC
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") Taxable Value
-                div(class="width-100 flex-container flex-direction-column") 
-                    div(class="bold fs-10 text-align-center pb-5") IGST
-                    div(class="flex-container width-100 pn ")
-                      div(class=" width-100 bold fs-10 text-align-center pn pt-5") Rate
-                      div(class="width-100 bold fs-10 text-align-center pn pt-5") Amount
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") Total Tax Amount
-               
+            if uniqueTaxes[0] && String(uniqueTaxes[0]).includes("IGST")
+                div(class="flex br-1 mt-10 bg-grey pn") 
+                    div(class="width-100")
+                        div(class="bold hsn-table justify-content-center  bright-1") HSN/SAC
+                    div(class="width-100 ")
+                        div(class="bold hsn-table justify-content-center  bright-1") Taxable Value
+                    div(class="width-100 flex-container flex-direction-column pn height-100") 
+                        div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") IGST
+                        div(class="flex-container hsn-table width-100 pn ")
+                          div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
+                          div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
+                    div(class="width-100 ")
+                        div(class="bold justify-content-center  hsn-table") Total Tax Amount
+
+                each val in lineItems
+                  div(class="flex br-1 h-30 bt-n pn")
+                      div(class="width-100")
+                          div(class="bold hsn-table justify-content-center  bright-1") !{val.itemHsnOrSac || "-"}
+                      div(class="width-100 ")
+                          div(class="bold hsn-table justify-content-center  bright-1") !{Number(val.taxableAmount).toFixed(2)}
+                      div(class="width-100 flex-container flex-direction-column pn height-100") 
+                          div(class="flex-container hsn-table width-100 pn ")
+                            div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{val.itemTax} %
+                            div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
+                      div(class="width-100 ")
+                          div(class="bold hsn-table justify-content-center ") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
+                  
+            if uniqueTaxes[0] && !(String(uniqueTaxes[0]).includes("IGST"))
+              div(class="flex br-1 mt-10 bg-grey pn")
+                  div(class="width-100") 
+                      div(class="bold hsn-table justify-content-center  bright-1") HSN/SAC
+                  div(class="width-100 ")
+                      div(class="bold hsn-table justify-content-center  bright-1") Taxable Value
+                  div(class="width-100 flex-container flex-direction-column pn height-100") 
+                      div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") SGST
+                      div(class="flex-container hsn-table width-100 pn ")
+                        div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
+                        div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
+                  div(class="width-100 flex-container flex-direction-column pn height-100") 
+                      div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") CGST
+                      div(class="flex-container hsn-table width-100 pn ")
+                        div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
+                        div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
+                  div(class="width-100 ")
+                      div(class="bold justify-content-center  hsn-table") Total Tax Amount
+
+              each val in lineItems
+                div(class="flex br-1 h-30 bt-n pn")
+                    div(class="width-100") 
+                        div(class="bold hsn-table justify-content-center  bright-1") !{val.itemHsnOrSac || "-"}
+                    div(class="width-100 ")
+                        div(class="bold hsn-table justify-content-center  bright-1") !{Number(val.taxableAmount).toFixed(2)}
+                    div(class="width-100 flex-container flex-direction-column pn height-100") 
+                        div(class="flex-container hsn-table width-100 pn ")
+                          div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{Number(val.itemTax) / 2} %
+                          div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number((val.itemAmount - val.taxableAmount )/2).toFixed(2)}
+                    div(class="width-100 flex-container flex-direction-column pn height-100") 
+                        div(class="flex-container hsn-table width-100 pn ")
+                          div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{Number(val.itemTax) / 2} %
+                          div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number((val.itemAmount - val.taxableAmount) / 2).toFixed(2) }
+                    div(class="width-100 ")
+                        div(class="bold hsn-table justify-content-center ") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
+
+            div(class="width-100 num-to-eng br-1 mt-10")
+              div(class="fs-10 bold") Invoice Amount (in words)
+              div(class="fs-10") Invoice Amount (in words)
 
 
-            div(class="width-100 flex-container")
-                div(class="width-100 ")
-                    div(class="bank-details") BANK DETAILS
-                        div(class="flex-container pn")
-                            div(class="fs-12-lh-20 width-100 pn") Account Number:
-                            div(class="fs-12-lh-20 width-100 pn") !{invoiceJsonData.invoiceBankDetails.accountNumber}
-                        div(class="flex-container pn")
-                            div(class="fs-12-lh-20 width-100 pn") IFSC code:
-                            div(class="fs-12-lh-20 width-100 pn") !{invoiceJsonData.invoiceBankDetails.ifscCode}
-                        div(class="flex-container pn")
-                            div(class="fs-12-lh-20 width-100 pn") Bank & Branch:
-                            div(class="fs-12-lh-20 width-100 pn") !{invoiceJsonData.invoiceBankDetails.bankName}
-                        div(class="flex-container pn mt-10")
-                            div(class="width-100 flex-container pn flex-direction-column justify-content-center")
-                                div(class="fs-12-lh-20 width-70 pn") Payment QR code
-                                div(class="fs-12-lh-20 width-70 pn") UPI Id
-                                div(class="fs-12-lh-20 width-70-per pn") !{invoiceJsonData.customerUpiId || " "}
-                            div(class="width-100 pn ml-n10")
-                                img(src=invoiceQr height="100px" width="100px ")
-                        div(class="flex-container pn")
-                            div(class="fs-12-lh-20 width-100 pn mt-10") Terms and Conditions
-                        div(class="flex-container pn")
-                            div(class="fs-10 width-100 pn") !{invoiceJsonData.termsAndConditions || ""}
-                div(class="width-100 flex-container flex-direction-column align-items-end")
-                    div(class="flex-container pn width-50")
-                        div(class="fs-12-lh-20 text-align-end width-100 pn") Taxable Amount:
-                        div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{Number(taxableAmount || 0).toFixed(1)}
-                    each val in uniqueTaxes
-                        div(class="flex-container pn width-50")
-                            div(class="fs-12-lh-20 text-align-end width-100 pn") !{val[0]}:
-                            div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{Number(val[1] || 0).toFixed(2)}
-                    div(class="flex-container pn width-50 width-50")
-                        div(class="fs-12-lh-20 text-align-end width-50 border-top pn bold") GRAND TOTAL
-                        div(class="fs-12-lh-20 text-align-end width-50 border-top pn bold") ₹ !{Number(invoiceJsonData.amount || 0).toFixed(2)}
-                    div(class="flex-container pn width-50")
-                        div(class="fs-12-lh-20 text-align-end width-50 border-top pn") RECEIVED AMOUNT
-                        div(class="fs-12-lh-20 text-align-end width-50 border-top pn") ₹ !{Number("" || 0).toFixed(2)}
-                    div(class="flex-container pn width-50")
-                        div(class="fs-12-lh-20 text-align-end width-50 border-top pn") BALANCE AMOUNT
-                        div(class="fs-12-lh-20 text-align-end width-50 border-top pn") ₹ !{Number(invoiceJsonData.amount || 0).toFixed(2)}
-                    if invoiceJsonData.invoiceSignature && invoiceJsonData.invoiceSignature.length
-                        div(class="mt-10")
-                            img(src=invoiceJsonData.invoiceSignature height="60px" width="170px ")
-                    div(class="fs-10 text-align-end width-50 pn mn position-absolute") Authorised Signature
+            div(class="width-100 flex-container br-1 pl-10 bt-n")
+              div(class="flex-container mr-10 width-100 pn")
+                  div(class="fs-12-lh-20  white-space-nowrap-no-width color-secondary mr-5") BANK NAME:
+                  div(class="fs-12-lh-20 white-space-nowrap-no-width") !{pharmaInvoice.invoiceBankDetails.bankName}
+              div(class="flex-container mr-10 white-space-nowrap-no-width width-100 pn")
+                  div(class="fs-12-lh-20 color-secondary mr-5") A/C No.
+                  div(class="fs-12-lh-20") !{pharmaInvoice.invoiceBankDetails.accountNumber}
+              div(class="flex-container width-100 pn")
+                  div(class="fs-12-lh-20 color-secondary mr-5") IFSC:
+                  div(class="fs-12-lh-20") !{pharmaInvoice.invoiceBankDetails.ifscCode}
+
+            div(class="flex-container pn br-1 bt-n")
+              div(class="pl-10 pt-5 pb-5 width-100 bright-1")
+                div(class="fs-10 bold width-100") Terms and Conditions
+                div(class="fs-10 width-100 pn") !{invoiceJsonData.termsAndConditions || ""}
+              div(class=" flex-container pn p-10")
+                div(class="width-100 pn flex-center-center justify-content-end pr-10 bright-1 pn")
+                    img(src=invoiceQr height="130px" width="130px ")
+                div(class="flex-center-center justify-content-end flex-direction-column pl-10 pr-10")
+                  if invoiceJsonData.invoiceSignature && invoiceJsonData.invoiceSignature.length
+                      div(class="")
+                          img(src=invoiceJsonData.invoiceSignature height="60px" width="170px ")
+                  div(class="fs-10 mt-10 text-align-end") Authorised Signature
 
 
 

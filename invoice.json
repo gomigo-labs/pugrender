@@ -86,6 +86,38 @@
       "uom":"EA"
     },
     {
+      "batch":"b100",
+      "discount":0,
+      "itemAmount":"118",
+      "itemCode":"15c150",
+      "itemDescription":"paper 200gsm",
+      "itemHsnOrSac":"00564",
+      "itemId":"15c150",
+      "itemName":"paper paper paper description",
+      "itemPrice":"20",
+      "itemQty":5,
+      "itemTax":18,
+      "lineNumber":"1",
+      "taxableAmount":100,
+      "uom":"EA"
+    },
+    {
+      "batch":"b100",
+      "discount":0,
+      "itemAmount":"118",
+      "itemCode":"15c150",
+      "itemDescription":"paper 200gsm",
+      "itemHsnOrSac":"00564",
+      "itemId":"15c150",
+      "itemName":"paper paper paper description",
+      "itemPrice":"20",
+      "itemQty":5,
+      "itemTax":18,
+      "lineNumber":"1",
+      "taxableAmount":100,
+      "uom":"EA"
+    },
+    {
       "discount":0,
       "itemAmount":"100",
       "itemCode":"8df675",
