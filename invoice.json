@@ -23,7 +23,7 @@
       "country":"India",
       "phoneNo":"454464",
       "state":"Delhi",
-      "zipCode":"110069"
+      "pincode":"110069"
     },
     "shippingAddress":{
       "addressLine1":"ABC-14, Wazirpur Industrial Area, New Delhi",
@@ -32,7 +32,7 @@
       "country":"India",
       "phoneNo":"454464",
       "state":"Delhi",
-      "zipCode":"110069"
+      "pincode":"110069"
     }
   },
   "customerEmail":" ",
