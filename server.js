@@ -14,7 +14,7 @@ let invoiceJson = require("./invoice.json");
 
 let pharmaInvoiceJson = require("./pharmaJson.json");
 
-content = pug.renderFile("gst.pug", {
+content = pug.renderFile("index.pug", {
   title: invoiceJson.invoiceNumber,
   GSTIN: invoiceJson.customerGSTIN,
   organizationNo: invoiceJson.organizationNo || " ",
