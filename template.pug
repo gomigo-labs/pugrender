@@ -1044,7 +1044,7 @@ body
                   div(class="width-20 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
                       div(class="  fs-8  text-secondary") !{val.uom}
                   div(class="width-40 p-10 flex-center-center justify-content-start  height-100 border-right-1 height-20  ")
-                      div(class="  fs-8  text-secondary") !{val.itemPrice}
+                      div(class="  fs-8  text-secondary") !{Number(val.itemPrice).toFixed(2)}}
                   div(class="width-45 p-10 flex-center-center justify-content-start  height-100 ")
                       div(class="  fs-8  text-secondary") !{Number(val.itemAmount).toFixed(2)}
             div(class="width-100 position-relative flex-container pn")
