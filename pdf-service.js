@@ -2,12 +2,12 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const imageToBase64 = require("image-to-base64");
 
-const createPdf = async (format) => {
+const createPdf = async (format,fileName) => {
   const browser = await puppeteer.launch({
     headless: true,
   });
   let htmlContent = fs.readFileSync(`./gst_html.html`, "utf8");
-
+  let fileNamePath= fileName || `my-invoice.pdf`
   const page = await browser.newPage();
 
   await page.setContent(htmlContent, {
@@ -16,7 +16,7 @@ const createPdf = async (format) => {
 
   await page.pdf({
     format: format,
-    path: `my-invoice.pdf`,
+    path: fileNamePath,
     landscape: false,
   });
 

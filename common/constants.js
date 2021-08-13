@@ -321,13 +321,22 @@ exports.eventNotification={
 }
 
 exports.invoiceSetting={
-    "0":"views/stylishInvoice.pug",
-    "1":"views/pharmaInvoice.pug"
+    "0":"template.pug",
+    "1":"index.pug",
+    "2":"gst.pug",
+    "3":"gst.pug",
+    "4":"workmiddle.pug",
+    "5":"worklast.pug"
 }
 exports.invoicePageFormat={
-    "0":{pageFormat:"A4",landscape:false},
-    "1":{pageFormat:"A5",landscape:true}
+    "0":{pageFormat:"A4",landscape:false,lineItemLimit:7},
+    "1":{pageFormat:"A5",landscape:true,lineItemLimit:8},
+    "2":{pageFormat:"A4",landscape:false,lineItemLimit:6},
+    "3":{pageFormat:"A4",landscape:false,lineItemLimit:7},
+    "3middle":{pageFormat:"A4",landscape:false,lineItemLimit:18},
+    "3last":{pageFormat:"A4",landscape:false,lineItemLimit:10}
 }
+
 
 exports.itemTypes={
     PRODUCT:"product",
