@@ -1128,7 +1128,7 @@ body
                     div(class="width-100 ")
                         div(class="bold justify-content-center  hsn-table") Total Tax Amount
 
-                each val in lineItems
+                each val in hsnData
                   div(class="flex br-1 h-30 bt-n pn")
                       div(class="width-100")
                           div(class="bold hsn-table justify-content-center  bright-1") !{val.itemHsnOrSac || "-"}
@@ -1160,7 +1160,7 @@ body
                   div(class="width-100 ")
                       div(class="bold justify-content-center  hsn-table") Total Tax Amount
 
-              each val in lineItems
+              each val in hsnData
                 div(class="flex br-1 h-30 bt-n pn")
                     div(class="width-100") 
                         div(class="bold hsn-table justify-content-center  bright-1") !{val.itemHsnOrSac || "-"}

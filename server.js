@@ -13,23 +13,27 @@ let content;
 let invoiceJson = require("./invoice.json");
 
 let pharmaInvoiceJson = require("./pharmaJson.json");
-let hsnData={}
+let hsnData = {};
 
-for(let lineItem of invoiceJson.lineItems){
-  if (hsnData.hasOwnProperty(lineItem.itemHsnOrSac)){
-    hsnData[`${lineItem.itemHsnOrSac}`].taxableAmount += Number(lineItem.taxableAmount)
-    hsnData[`${lineItem.itemHsnOrSac}`].itemAmount += Number(lineItem.itemAmount)
-  }else {
-    hsnData[`${lineItem.itemHsnOrSac}`] ={
-      itemHsnOrSac:lineItem.itemHsnOrSac,
-      taxableAmount:Number(lineItem.taxableAmount),
-      itemTax:lineItem.itemTax,
-      itemAmount:Number(lineItem.itemAmount)
-    }
+for (let lineItem of invoiceJson.lineItems) {
+  if (hsnData.hasOwnProperty(lineItem.itemHsnOrSac)) {
+    hsnData[`${lineItem.itemHsnOrSac}`].taxableAmount += Number(
+      lineItem.taxableAmount
+    );
+    hsnData[`${lineItem.itemHsnOrSac}`].itemAmount += Number(
+      lineItem.itemAmount
+    );
+  } else {
+    hsnData[`${lineItem.itemHsnOrSac}`] = {
+      itemHsnOrSac: lineItem.itemHsnOrSac,
+      taxableAmount: Number(lineItem.taxableAmount),
+      itemTax: lineItem.itemTax,
+      itemAmount: Number(lineItem.itemAmount),
+    };
   }
 }
 
-hsnData = Object.values(hsnData)
+hsnData = Object.values(hsnData);
 
 content = pug.renderFile("gst.pug", {
   title: invoiceJson.invoiceNumber,
@@ -47,7 +51,7 @@ content = pug.renderFile("gst.pug", {
   pharmaInvoice: pharmaInvoiceJson,
   lineItemsPharma: pharmaInvoiceJson.lineItems,
   time: moment().format("HH:MM"),
-  hsnData : hsnData
+  hsnData: hsnData,
 });
 
 fs.writeFile("gst_html.html", content, function (err, data) {
