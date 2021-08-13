@@ -16,6 +16,7 @@
     "fs": "0.0.1-security",
     "fs-extra": "^10.0.0",
     "image-to-base64": "^2.2.0",
+    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "pug": "^3.0.2",
     "puppeteer": "^10.1.0",
