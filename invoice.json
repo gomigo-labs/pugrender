@@ -135,8 +135,65 @@
       ],
       "taxableAmount":100,
       "uom":"EA"
+    },
+    {
+      "discount":0,
+      "itemAmount":"100",
+      "itemCode":"8df675",
+      "itemDescription":"paper 200gsm",
+      "itemHsnOrSac":"00564",
+      "itemId":"8df675",
+      "itemName":"Item 4",
+      "itemPrice":"20",
+      "itemQty":5,
+      "itemTax":18,
+      "lineNumber":"2",
+      "serialNos":[
+        "s01",
+        "s02"
+      ],
+      "taxableAmount":100,
+      "uom":"EA"
+    },
+    {
+      "discount":0,
+      "itemAmount":"100",
+      "itemCode":"8df675",
+      "itemDescription":"paper 200gsm",
+      "itemHsnOrSac":"00564",
+      "itemId":"8df675",
+      "itemName":"Item 4",
+      "itemPrice":"20",
+      "itemQty":5,
+      "itemTax":18,
+      "lineNumber":"2",
+      "serialNos":[
+        "s01",
+        "s02"
+      ],
+      "taxableAmount":100,
+      "uom":"EA"
+    },
+    {
+      "discount":0,
+      "itemAmount":"100",
+      "itemCode":"8df675",
+      "itemDescription":"paper 200gsm",
+      "itemHsnOrSac":"00564",
+      "itemId":"8df675",
+      "itemName":"Item 4",
+      "itemPrice":"20",
+      "itemQty":5,
+      "itemTax":18,
+      "lineNumber":"2",
+      "serialNos":[
+        "s01",
+        "s02"
+      ],
+      "taxableAmount":100,
+      "uom":"EA"
     }
-  ],
+    ],
   "modifiedOn":1626171809083,
   "orderNo":"30056846",
   "organizationGSTIN":"26AAACL1069K1ZC",
@@ -145,7 +202,7 @@
   "SK":" ",
   "taxableAmount":900,
   "tenantId":"skull-dev",
-  "termsAndConditions":"Terms And Conditions (200 Words)",
+  "termsAndConditions": "Lorem ipsum Netflix disinfect virtual. Essential doomscroll Tiger King furlough droplet quaranteam home school herd immunity. Queen's Gambit postponed furlough. Isolation Zoom call maskne stay-at-home order protests Coronavirus this claim is disputed. Self care disinfect social distancing TikTok doggface208. Wash hands Drizly pod my camera is off home school lockdown. Drive-in frontline workers Dr. Fauci sourdough bread doggface208.",
   "vehicleNo":"DL-4567",
   "eWayBillNo":"10007821738973",
   "uniqueTaxes":{

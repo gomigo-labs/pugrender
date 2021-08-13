@@ -869,7 +869,7 @@ html
             }
 
             .table-height {
-              height: 270px;
+              height: 278px;
             }
 
             .mt-5 {
@@ -1012,6 +1012,8 @@ body
                     div(class="text-secondary pr-10 bold width-30") GSTIN:
                     div(class="text-secondary") !{invoiceJsonData.customerGSTIN}
             
+            div(class="flex height-30 br-1 bt-none") Subject:- 
+              div(class="flex height-30 ") !{invoiceJsonData.invoiceSubject}
             div(class="flex bg-grey br-1 bt-none")
                 div(class="width-200 ")
                     div(class="bold fs-10") ITEMS
@@ -1192,12 +1194,12 @@ body
                   div(class="fs-12-lh-20") !{invoiceJsonData.invoiceBankDetails.ifscCode}
 
             div(class="flex-container pn br-1 bt-n")
-              div(class="pl-10 pt-5 pb-5 width-100 bright-1")
+              div(class="pl-10 pt-5 pb-5 width-100 bright-1 pr-10")
                 div(class="fs-10 bold width-100") Terms and Conditions
                 div(class="fs-10 width-100 pn") !{invoiceJsonData.termsAndConditions || ""}
               div(class=" flex-container pn p-10")
                 div(class="width-100 pn flex-center-center justify-content-end pr-10 bright-1 pn")
-                    img(src=invoiceQr height="130px" width="130px ")
+                    img(src=invoiceQr height="110px" width="110px ")
                 div(class="flex-center-center justify-content-end flex-direction-column pl-10 pr-10")
                   if invoiceJsonData.invoiceSignature && invoiceJsonData.invoiceSignature.length
                       div(class="")
