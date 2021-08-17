@@ -6,6 +6,8 @@ const moment = require("moment");
 const base64Img = require("base64-img");
 const { httpConstants } = require("./common/constants");
 const orgJsonData = require("./org.json");
+const creditNoteJson = require('./creditnote.json')
+const debitNoteJson = require('./debitnote.json')
 
 //variables
 let content;
