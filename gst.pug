@@ -194,10 +194,7 @@ html
             }
 
             .width-95-per {
-                width: 95%
-            }
-            .width-90-per {
-                width: 90%
+                width: 95% !important
             }
 
             .width-100 {
@@ -958,6 +955,24 @@ html
               padding:10px;
             }
 
+            .serial-width{
+              width: 30%;
+              font-size: 9px
+            }
+
+            .item-name {
+              justify-content: flex-start !important;
+              align-items: flex-start !important
+            }
+
+            .pt-10 {
+              padding-top: 5px !important;
+            }
+
+            .p {
+              height: 30px
+            }
+
 body
     div(class="div-center")
         div(class="body-center height-100 width-100 monst bg-white position-relative")
@@ -1034,29 +1049,35 @@ body
 
             div(class="table-height br-1 bt-none")
               each val in lineItems
-                  div(class="flex bb-1")
-                      div(class="flex-align width-200 pn pl-10")
-                          div(class="fs-10") !{val.itemName}
-                          div(class="fs-10 color-secondary") !{val.itemCode}
-                      div(class="width-100 flex-align pn")
+                  div(class="flex bb-1 item-name pt-10")
+                      div(class="flex-align width-200 pn pl-10 item-name")
+                          if val.batch
+                            div(class="flex-align width-200 pn pl-10 serial item-name")
+                              div(class="fs-10") !{val.itemName}
+                              div(class="fs-10 color-secondary serial-width") !{val.batch}
+                          if val.serialNos
+                            div(class="flex-align width-200 pn pl-10 serial  item-name")
+                                div(class="fs-10") !{val.itemName}
+                                div(class="fs-10 color-secondary serial-width") !{val.serialNos.join(", ")}
+                      div(class="width-100 flex-align pn item-name")
                           div(class="fs-10") !{val.itemHsnOrSac || "-" }
                           div(class="width-100 ")
-                      div(class="width-100 flex-align pn")
+                      div(class="width-100 flex-align pn item-name ")
                           div(class="fs-10") !{val.itemQty}
                           div(class="width-100 ")
-                      div(class="width-100 flex-align pn")
+                      div(class="width-100 flex-align pn item-name")
                           div(class="fs-10") !{val.itemPrice}
                           div(class="width-100 ")
-                      div(class="width-100 flex-align pn")
+                      div(class="width-100 flex-align pn item-name")
                           div(class="fs-10") !{val.uom}
                           div(class="width-100 ")
-                      div(class="width-100 flex-align pn")
+                      div(class="width-100 flex-align pn item-name")
                           div(class="fs-10") !{val.discount}
                           div(class="width-100 ")
-                      div(class="width-100 flex-align pn")
+                      div(class="width-100 flex-align pn p")
                           div(class="fs-10") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
                           div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
-                      div(class="width-100 flex-align pn pr-10")
+                      div(class="width-100 flex-align pn pr-10 item-name")
                           div(class="fs-10") !{Number(val.itemAmount).toFixed(2)}
                           div(class="width-100 ")
 
