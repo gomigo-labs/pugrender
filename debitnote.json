@@ -48,24 +48,13 @@
       "itemDescription": " ",
       "itemHsnOrSac": "S-10001",
       "itemId": "ab08c9",
-      "itemName": "serial",
+      "itemName": "SERIAL",
       "itemPrice": "200",
       "itemQty": "3",
       "itemTax": 18,
       "lineNumber": 2,
       "serialNos": [
-        {
-          "label": "4564654",
-          "value": "4564654"
-        },
-        {
-          "label": "546546546",
-          "value": "546546546"
-        },
-        {
-          "label": "654654654",
-          "value": "654654654"
-        }
+        "464654", "1545545", "215511510", "4545454", "45454572", "55665656", "5465656"
       ],
       "taxableAmount": 600,
       "uom": "kg"

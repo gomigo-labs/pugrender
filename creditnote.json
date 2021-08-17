@@ -39,7 +39,7 @@
   "customerId": "816ebc17",
   "customerName": "Luke Skywalker",
   "customerNotes": "",
-  "dueDate": 1629198051000,
+  "invoiceDate": 1629198051000,
   "invoiceBankDetails": {
     "accountName": "Aayush GC",
     "accountNumber": "119801502070",
@@ -61,18 +61,10 @@
       "itemTax": 12,
       "lineNumber": 1,
       "serialNos": [
-        {
-          "label": "6654564",
-          "value": "6654564"
-        },
-        {
-          "label": "546546546",
-          "value": "546546546"
-        },
-        {
-          "label": "6565465",
-          "value": "6565465"
-        }
+       "456464565", "45454554", 
+       "456464565", "45454554", 
+       "456464565", "45454554", 
+       "456464565", "45454554"
       ],
       "taxableAmount": 600,
       "uom": "kg"

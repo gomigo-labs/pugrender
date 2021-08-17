@@ -6,8 +6,8 @@ const moment = require("moment");
 const base64Img = require("base64-img");
 const { httpConstants } = require("./common/constants");
 const orgJsonData = require("./org.json");
-const creditNoteJson = require('./creditnote.json')
-const debitNoteJson = require('./debitnote.json')
+const creditNoteJson = require("./creditnote.json");
+const debitNoteJson = require("./debitnote.json");
 
 //variables
 let content;
@@ -37,7 +37,7 @@ for (let lineItem of invoiceJson.lineItems) {
 
 hsnData = Object.values(hsnData);
 
-content = pug.renderFile("gst.pug", {
+content = pug.renderFile("credit.pug", {
   title: invoiceJson.invoiceNumber,
   GSTIN: invoiceJson.customerGSTIN,
   organizationNo: invoiceJson.organizationNo || " ",
@@ -50,13 +50,18 @@ content = pug.renderFile("gst.pug", {
   orgJson: orgJsonData,
   invoiceJsonData: invoiceJson,
   uniqueTaxes: Object.entries(invoiceJson.uniqueTaxes),
+  debitNoteUniqueTaxes: Object.entries(debitNoteJson.uniqueTaxes),
+  creditNoteUniqueTaxes: Object.entries(creditNoteJson.uniqueTaxes),
   pharmaInvoice: pharmaInvoiceJson,
   lineItemsPharma: pharmaInvoiceJson.lineItems,
   time: moment().format("HH:MM"),
   hsnData: hsnData,
+  debitNoteJson: debitNoteJson,
+  debitNoteLineItems: debitNoteJson.lineItems,
+  creditNoteJson: creditNoteJson,
 });
 
-fs.writeFile("gst_html.html", content, function (err, data) {
+fs.writeFile("credit_html.html", content, function (err, data) {
   if (err) {
     return console.log(err);
   }
