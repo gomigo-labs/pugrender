@@ -906,7 +906,7 @@ html
 body
     div(class="div-center bg-f7f7f7")
         div(class="body-center height-100 width-100 monst bg-white position-relative")
-            div(class="width-100 text-align-center") SALES ORDER
+            div(class="width-100 text-align-center") QUOTATION
             div(class="flex-container")
                 if salesOrderJson.invoiceLogo && salesOrderJson.invoiceLogo.length > 0
                     div(class=" marginLeft-10")
@@ -963,17 +963,14 @@ body
                 div(class="width-100 flex align-items-start")
                     div()
                         div(class="flex-container pn")
+                            div(class="bold mr-5 fs-12-lh-20") PO Bill No:
+                            div(class="fs-12-lh-20") !{salesOrderJson.orderNo}
+                        div(class="flex-container pn")
                             div(class="fs-12-lh-20 pr-10 bold") Vehicle No:
                             div(class="fs-12-lh-20") !{salesOrderJson.vehicleNo}
                         div(class="flex-container pn")
                             div(class="fs-12-lh-20 pr-10 bold") E-way Bill No:
                             div(class="fs-12-lh-20") !{salesOrderJson.eWayBillNo}
-                        div(class="flex-container pn")
-                            div(class="fs-12-lh-20 pr-10 bold") Sector:
-                            div(class="fs-12-lh-20") !{salesOrderJson.sector}
-                        div(class="flex-container pn")
-                            div(class="fs-12-lh-20 pr-10 bold") Passenger Name:
-                            div(class="fs-12-lh-20") !{salesOrderJson.passengerName}
             div(class="flex mt-10 black-border")
                 div(class="width-200 ")
                     div(class="bold fs-10") ITEMS

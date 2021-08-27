@@ -38,7 +38,7 @@ for (let lineItem of invoiceJson.lineItems) {
 
 hsnData = Object.values(hsnData);
 
-content = pug.renderFile("travel.pug", {
+content = pug.renderFile("quotation.pug", {
   title: invoiceJson.invoiceNumber,
   GSTIN: invoiceJson.customerGSTIN,
   organizationNo: invoiceJson.organizationNo || " ",
@@ -63,7 +63,7 @@ content = pug.renderFile("travel.pug", {
   salesOrderJson: salesOrderJson,
 });
 
-fs.writeFile("travel_html.html", content, function (err, data) {
+fs.writeFile("quotation_html.html", content, function (err, data) {
   if (err) {
     return console.log(err);
   }
