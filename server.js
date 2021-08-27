@@ -8,6 +8,7 @@ const { httpConstants } = require("./common/constants");
 const orgJsonData = require("./org.json");
 const creditNoteJson = require("./creditnote.json");
 const debitNoteJson = require("./debitnote.json");
+const salesOrderJson = require("./salesOrderInvoice.json");
 
 //variables
 let content;
@@ -37,7 +38,7 @@ for (let lineItem of invoiceJson.lineItems) {
 
 hsnData = Object.values(hsnData);
 
-content = pug.renderFile("credit.pug", {
+content = pug.renderFile("travel.pug", {
   title: invoiceJson.invoiceNumber,
   GSTIN: invoiceJson.customerGSTIN,
   organizationNo: invoiceJson.organizationNo || " ",
@@ -59,9 +60,10 @@ content = pug.renderFile("credit.pug", {
   debitNoteJson: debitNoteJson,
   debitNoteLineItems: debitNoteJson.lineItems,
   creditNoteJson: creditNoteJson,
+  salesOrderJson: salesOrderJson,
 });
 
-fs.writeFile("credit_html.html", content, function (err, data) {
+fs.writeFile("travel_html.html", content, function (err, data) {
   if (err) {
     return console.log(err);
   }
