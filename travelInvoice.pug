@@ -948,25 +948,12 @@ body
                     if invoiceJsonData.customerAddress.billingAddress.addressLine2
                         div(class="fs-12-lh-20 width-90-per") !{invoiceJsonData.customerAddress.billingAddress.addressLine2},
                     div() !{invoiceJsonData.customerAddress.billingAddress.state}, !{invoiceJsonData.customerAddress.shippingAddress.city},!{invoiceJsonData.customerAddress.billingAddress.pincode}
-                div(class="width-100 ph-10 px-10 fs-12-lh-20")
-                    div(class="bold") SHIP TO
-                    div(class="go fs-12") !{invoiceJsonData.customerName}
-                    if invoiceJsonData.customerAddress.shippingAddress.addressLine1
-                        div(class="fs-12-lh-20 width-90-per") !{invoiceJsonData.customerAddress.shippingAddress.addressLine1},
-                    if invoiceJsonData.customerAddress.shippingAddress.addressLine2
-                        div(class="fs-12-lh-20 width-90-per") !{invoiceJsonData.customerAddress.shippingAddress.addressLine2},
-                    div(class="fs-12-lh-20") !{invoiceJsonData.customerAddress.shippingAddress.state},!{invoiceJsonData.customerAddress.shippingAddress.city}, !{invoiceJsonData.customerAddress.shippingAddress.pincode}
-                    div(class="flex-container pn")
-                        div(class="fs-12-lh-20 pr-10 bold") GSTIN:
-                        div(class="fs-12-lh-20") !{invoiceJsonData.customerGSTIN}
+
                 div(class="width-100 flex align-items-start")
                     div()
                         div(class="flex-container pn")
                             div(class="fs-12-lh-20 pr-10 bold") Vehicle No:
                             div(class="fs-12-lh-20") !{invoiceJsonData.vehicleNo}
-                        div(class="flex-container pn")
-                            div(class="fs-12-lh-20 pr-10 bold") Sector:
-                            div(class="fs-12-lh-20") !{invoiceJsonData.sector}
                         div(class="flex-container pn")
                             div(class="fs-12-lh-20 pr-10 bold") Passenger Name:
                             div(class="fs-12-lh-20") !{invoiceJsonData.passengerName}
