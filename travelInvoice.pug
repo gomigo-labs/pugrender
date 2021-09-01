@@ -957,6 +957,13 @@ body
                         div(class="flex-container pn")
                             div(class="fs-12-lh-20 pr-10 bold") Passenger Name:
                             div(class="fs-12-lh-20") !{invoiceJsonData.passengerName}
+                        div(class="flex-container pn")
+                            div(class="fs-12-lh-20 pr-10 bold") To:
+                            div(class="fs-12-lh-20") !{salesOrderJson.toDestination}
+                        div(class="flex-container pn")
+                            div(class="fs-12-lh-20 pr-10 bold") From:
+                            div(class="fs-12-lh-20") !{salesOrderJson.fromDestination}
+
             div(class="flex mt-10 black-border")
                 div(class="width-200 ")
                     div(class="bold fs-10") ITEMS
