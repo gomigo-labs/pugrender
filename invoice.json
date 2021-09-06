@@ -82,6 +82,7 @@
       "itemQty":5,
       "itemTax":18,
       "lineNumber":"1",
+      "serialNos": [],
       "taxableAmount":100,
       "uom":"EA"
     },
@@ -98,6 +99,7 @@
       "itemQty":5,
       "itemTax":18,
       "lineNumber":"1",
+      "serialNos": [],
       "taxableAmount":100,
       "uom":"EA"
     },
@@ -114,6 +116,7 @@
       "itemQty":5,
       "itemTax":18,
       "lineNumber":"1",
+      "serialNos": [],
       "taxableAmount":100,
       "uom":"EA"
     },

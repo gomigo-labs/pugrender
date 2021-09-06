@@ -973,6 +973,10 @@ html
               height: 30px
             }
 
+            .flex-add {
+              display: flex
+            }
+
 body
     div(class="div-center")
         div(class="body-center height-100 width-100 monst bg-white position-relative")
@@ -986,6 +990,8 @@ body
                           span(class="go") !{orgJson.businessName}
                       div(class="monst mt-5  width-100")
                           div(class="text-secondary width-100") !{orgJson.permanentAddress.address_line_1}, !{orgJson.permanentAddress.address_line_2 }
+                      div(class="monst m width-100")
+                          div(class="text-secondary width-100") !{orgJson.permanentAddress.state}, !{orgJson.permanentAddress.zip }
                       div(class="mt-5")
                           span(class="text-secondary") PHONE:
                           span(class="text-secondary label-Padding") !{orgJson.organizationAccount.mobileNo}
@@ -1012,7 +1018,13 @@ body
                     div(class="text-secondary width-90-per") !{invoiceJsonData.customerAddress.billingAddress.addressLine1},
                   if invoiceJsonData.customerAddress.billingAddress.addressLine2
                     div(class="text-secondary width-90-per") !{invoiceJsonData.customerAddress.billingAddress.addressLine2},
-                  div() !{invoiceJsonData.customerAddress.billingAddress.state}, !{invoiceJsonData.customerAddress.billingAddress.pincode}
+                  div(class="flex-add") 
+                    if invoiceJsonData.customerAddress.billingAddress.state
+                      div() !{invoiceJsonData.customerAddress.billingAddress.state} ,!{" "}
+                    if invoiceJsonData.customerAddress.billingAddress.pincode 
+                      div() !{invoiceJsonData.customerAddress.billingAddress.pincode}
+
+
 
               div(class="width-100 flex-container")
                 div(class="width-100 ph-10 text-secondary")
@@ -1022,7 +1034,11 @@ body
                     div(class="text-secondary width-90-per") !{invoiceJsonData.customerAddress.shippingAddress.addressLine1},
                   if invoiceJsonData.customerAddress.shippingAddress.addressLine2
                     div(class="text-secondary width-90-per") !{invoiceJsonData.customerAddress.shippingAddress.addressLine2},
-                  div(class="text-secondary") !{invoiceJsonData.customerAddress.shippingAddress.state}, !{invoiceJsonData.customerAddress.shippingAddress.pincode}
+                  div(class="flex-add") 
+                    if invoiceJsonData.customerAddress.shippingAddress.state
+                      div() !{invoiceJsonData.customerAddress.shippingAddress.state} ,!{" "}
+                    if invoiceJsonData.customerAddress.shippingAddress.pincode 
+                      div() !{invoiceJsonData.customerAddress.shippingAddress.pincode}
                   div(class="flex-container pn")
                     div(class="text-secondary pr-10 bold width-30") GSTIN:
                     div(class="text-secondary") !{invoiceJsonData.customerGSTIN}
@@ -1055,7 +1071,7 @@ body
                             div(class="flex-align width-200 pn pl-10 serial item-name")
                               div(class="fs-10") !{val.itemName}
                               div(class="fs-10 color-secondary serial-width") !{val.batch}
-                          if val.serialNos
+                          if val.serialNos.length > 0
                             div(class="flex-align width-200 pn pl-10 serial  item-name")
                                 div(class="fs-10") !{val.itemName}
                                 div(class="fs-10 color-secondary serial-width") !{val.serialNos.join(", ")}
