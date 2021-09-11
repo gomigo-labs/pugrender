@@ -124,7 +124,7 @@
    "addedOn": 1630524400371
   },
   "amount": 13,
-  "customerGSTIN": "25ASFGFDHFGHFGD",
+  "customerGSTIN": "",
   "invoiceSubject": "",
   "uniqueTaxes": {
    "IGST@12": 1.368
@@ -151,5 +151,6 @@
     "state": ""
    }
   },
-  "customerId": "11a53842"
+  "customerId": "11a53842",
+  "organizationGSTIN": ""
  }
