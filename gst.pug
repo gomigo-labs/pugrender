@@ -1055,7 +1055,7 @@ body
                 div(class="width-100 ")
                     div(class="bold fs-10 ") RATE
                 div(class="width-100 ")
-                    div(class="bold fs-10 ") UOM
+                    div(class="bold fs-10 width-30") SKU / ITEM-CODE
                 div(class="width-100 ")
                     div(class="bold fs-10 ") DISC.(%)
                 div(class="width-100 ")
@@ -1083,13 +1083,13 @@ body
                           div(class="fs-10") !{val.itemHsnOrSac || "-" }
                           div(class="width-100 ")
                       div(class="width-100 flex-align pn item-name ")
-                          div(class="fs-10") !{val.itemQty}
+                          div(class="fs-10") !{val.itemQty} !{val.uom}
                           div(class="width-100 ")
                       div(class="width-100 flex-align pn item-name")
                           div(class="fs-10") !{val.itemPrice}
                           div(class="width-100 ")
                       div(class="width-100 flex-align pn item-name")
-                          div(class="fs-10") !{val.uom}
+                          div(class="fs-10") !{val.itemCode}
                           div(class="width-100 ")
                       div(class="width-100 flex-align pn item-name")
                           div(class="fs-10") !{val.discount}
