@@ -956,10 +956,10 @@ body
                     if salesOrderJson.customerAddress.billingAddress.addressLine2
                       div(class="fs-12-lh-20 width-90-per") !{salesOrderJson.customerAddress.billingAddress.addressLine2},
                     div(class="flex-add") 
-                      if invoiceJsonData.customerAddress.billingAddress.state
-                        div() !{invoiceJsonData.customerAddress.billingAddress.state} ,!{" "}
-                      if invoiceJsonData.customerAddress.billingAddress.pincode 
-                        div() !{invoiceJsonData.customerAddress.billingAddress.pincode}
+                      if salesOrderJson.customerAddress.billingAddress.state
+                        div() !{salesOrderJson.customerAddress.billingAddress.state} ,!{" "}
+                      if salesOrderJson.customerAddress.billingAddress.pincode 
+                        div() !{salesOrderJson.customerAddress.billingAddress.pincode}
                 div(class="width-100 ph-10 px-10 fs-12-lh-20")
                     div(class="bold") SHIP TO
                     div(class="go fs-12") !{salesOrderJson.customerName}
@@ -968,10 +968,10 @@ body
                     if salesOrderJson.customerAddress.shippingAddress.addressLine2
                       div(class="fs-12-lh-20 width-90-per") !{salesOrderJson.customerAddress.shippingAddress.addressLine2},
                     div(class="flex-add") 
-                      if invoiceJsonData.customerAddress.shippingAddress.state
-                        div() !{invoiceJsonData.customerAddress.shippingAddress.state} ,!{" "}
-                      if invoiceJsonData.customerAddress.shippingAddress.pincode 
-                        div() !{invoiceJsonData.customerAddress.shippingAddress.pincode}
+                      if salesOrderJson.customerAddress.shippingAddress.state
+                        div() !{salesOrderJson.customerAddress.shippingAddress.state} ,!{" "}
+                      if salesOrderJson.customerAddress.shippingAddress.pincode 
+                        div() !{salesOrderJson.customerAddress.shippingAddress.pincode}
                     if salesOrderJson.customerGSTIN.length > 0
                       div(class="flex-container pn")
                           div(class="fs-12-lh-20 pr-10 bold") GSTIN:
@@ -1087,6 +1087,10 @@ body
                         div(class="flex-container pn width-50")
                             div(class="fs-12-lh-20 text-align-end width-100 pn") !{val[0]}:
                             div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{Number(val[1] || 0).toFixed(2)}
+                    each val in salesOrderJson.additionalCharges
+                        div(class="flex-container pn width-50")
+                            div(class="fs-12-lh-20 text-align-end width-100 pn") !{val.chargeDescription}:
+                            div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{val.chargeAmount}
                     div(class="flex-container pn width-50 width-50")
                         div(class="fs-12-lh-20 text-align-end width-50 border-top pn bold") GRAND TOTAL
                         div(class="fs-12-lh-20 text-align-end width-50 border-top pn bold") ₹ !{Number(salesOrderJson.amount || 0).toFixed(2)}

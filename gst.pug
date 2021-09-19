@@ -1104,6 +1104,25 @@ body
                       div(class="width-100 flex-align pn pr-10 item-name")
                           div(class="fs-10") !{Number(val.itemAmount).toFixed(2)}
                           div(class="width-100 ")
+            if invoiceJsonData.additionalCharges.length > 0
+              each value in invoiceJsonData.additionalCharges
+                div(class="flex height-30 br-1 bt-none bg-grey")
+                    div(class="width-200 ")
+                        div(class="bold fs-10") Additional Charges
+                    div(class="width-100 ")
+                        div(class="bold fs-10 ")
+                    div(class="width-100 ")
+                        div(class="bold fs-10 ") 
+                    div(class="width-100 ")
+                        div(class="bold fs-10 ") 
+                    div(class="width-100 ")
+                        div(class="bold fs-10 ") 
+                    div(class="width-100 ")
+                        div(class="bold fs-10 ")
+                    div(class="width-100 ")
+                        div(class="bold fs-10 ") ₹ !{value.chargeDescription}
+                    div(class="width-100 ")
+                        div(class="bold fs-10 ") ₹ !{value.chargeAmount}
 
             div(class="flex height-30 br-1 bt-none bg-grey")
                 div(class="width-200 ")
@@ -1111,7 +1130,7 @@ body
                 div(class="width-100 ")
                     div(class="bold fs-10 ")
                 div(class="width-100 ")
-                    div(class="bold fs-10 ") !{lineItems.reduce((acc, obj) => acc + Number(obj.itemQty), 0)}
+                    div(class="bold fs-10 ") 
                 div(class="width-100 ")
                     div(class="bold fs-10 ") 
                 div(class="width-100 ")

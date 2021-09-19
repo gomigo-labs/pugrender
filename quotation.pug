@@ -1085,6 +1085,10 @@ body
                         div(class="flex-container pn width-50")
                             div(class="fs-12-lh-20 text-align-end width-100 pn") !{val[0]}:
                             div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{Number(val[1] || 0).toFixed(2)}
+                    each val in salesOrderJson.additionalCharges
+                        div(class="flex-container pn width-50")
+                            div(class="fs-12-lh-20 text-align-end width-100 pn") !{val.chargeDescription}:
+                            div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{val.chargeAmount}
                     div(class="flex-container pn width-50 width-50")
                         div(class="fs-12-lh-20 text-align-end width-50 border-top pn bold") GRAND TOTAL
                         div(class="fs-12-lh-20 text-align-end width-50 border-top pn bold") ₹ !{Number(salesOrderJson.amount || 0).toFixed(2)}

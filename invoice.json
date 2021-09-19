@@ -9,7 +9,7 @@
   "fromDestination": "",
   "dueDate": 1631903400000,
   "tenantId": "skull-prod",
-  "additionalCharges": [],
+  "additionalCharges": [{"chargeDescription": "Transport", "chargeAmount": "150"}, {"chargeDescription": "Loading", "chargeAmount": "500"}],
   "patientName": "Mayank Shroff",
   "contactPerson": {
    "contactPersonId": "",
@@ -19,7 +19,7 @@
   },
   "eWayBillNo": "",
   "invoiceBankDetails": {
-   "bankName": "",
+   "bankName": "test",
    "accountNumber": "119801502072",
    "accountName": "Aayush GC",
    "ifscCode": "ICIC0001198"

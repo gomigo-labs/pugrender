@@ -1040,10 +1040,10 @@ body
                       div(class="width-100 flex-align pn pr-10")
                           div(class="fs-10") !{val.itemAmount}
                           div(class="width-100 ")
+            
             div(class=" flex mt-10 black-border")
                 div(class="width-200 ")
                     div(class="bold fs-10")
-                
                 div(class="width-100 ")
                     div(class="bold fs-10")
                 div(class="width-100 ")
@@ -1081,6 +1081,10 @@ body
                     div(class="flex-container pn width-50")
                         div(class="fs-12-lh-20 text-align-end width-100 pn") Taxable Amount:
                         div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{Number(taxableAmount || 0).toFixed(2)}
+                    each val in invoiceJsonData.additionalCharges
+                        div(class="flex-container pn width-50")
+                            div(class="fs-12-lh-20 text-align-end width-100 pn") !{val.chargeDescription}:
+                            div(class="fs-12-lh-20 text-align-end width-100 pn") ₹ !{val.chargeAmount}
                     each val in uniqueTaxes
                         div(class="flex-container pn width-50")
                             div(class="fs-12-lh-20 text-align-end width-100 pn") !{val[0]}:

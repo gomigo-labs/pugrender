@@ -9,7 +9,8 @@
   "fromDestination": "test",
   "dueDate": 1631817000000,
   "tenantId": "skull-dev",
-  "additionalCharges": [],
+  "additionalCharges": [{"chargeDescription": "Transport", "chargeAmount": "150"}, {"chargeDescription": "Loading", "chargeAmount": "500"}],
+
   "invoiceSignature": {
    "path": "tenants/skull/file-uploader",
    "sourceFileName": "tenants/skull/file-uploader/1628956851063_8coZBZXdY2.jpg",
