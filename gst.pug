@@ -981,7 +981,11 @@ html
               margin-bottom: 10px
             }
 
-body
+            .hn {
+              height: 12px 
+            }
+
+bodyhn
     div(class="div-center")
         div(class="body-center height-100 width-100 monst bg-white position-relative")
             div(class="flex-container pn br-1")
@@ -1072,16 +1076,16 @@ body
                   div(class="flex bb-1 item-name pt-10")
                       div(class="flex-align width-200 pn pl-10 item-name")
                           if !val.batch && !val.serialNos.length > 0
-                            div(class="flex-align width-200 pn pl-10")
-                              div(class="fs-10 bold width-90-per") !{val.itemName}
+                            div(class="flex-align width-200 pn pl-10 hn")
+                              div(class="fs-10 bold width-90-per hn") !{val.itemName}
                               div(class="fs-10 color-secondary")
                           if val.batch
-                            div(class="flex-align width-200 pn pl-10")
-                                div(class="fs-10 bold width-90-per") !{val.itemName}
+                            div(class="flex-align width-200 pn pl-10 hn")
+                                div(class="fs-10 bold width-90-per hn") !{val.itemName}
                                 div(class="fs-10 color-secondary") !{val.batch}
                           if val.serialNos.length > 0 
-                            div(class="flex-align width-200 pn pl-10 serial")
-                                div(class="fs-10 bold width-90-per") !{val.itemName}
+                            div(class="flex-align width-200 pn pl-10 serial hn")
+                                div(class="fs-10 bold width-90-per hn") !{val.itemName}
                             div(class="fs-10 color-secondary width-95-per") !{val.serialNos.join(", ")}
                       div(class="width-100 flex-align pn item-name")
                           div(class="fs-10") !{val.itemHsnOrSac || "-" }
@@ -1098,7 +1102,7 @@ body
                       div(class="width-100 flex-align pn item-name")
                           div(class="fs-10") !{val.discount}
                           div(class="width-100 ")
-                      div(class="width-100 flex-align pn p")
+                      div(class="width-100 flex-align pn")
                           div(class="fs-10") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
                           div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
                       div(class="width-100 flex-align pn pr-10 item-name")
