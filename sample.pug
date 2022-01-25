@@ -997,216 +997,216 @@ body
     div(class="div-center")
         div(class="body-center height-100 width-100 monst bg-white position-relative")
             div(class="flex-container pn br-1")
-              div(class="width-100 flex-container pn bright-1")
-                  if creditNoteJson.invoiceLogo && creditNoteJson.invoiceLogo.length > 0
-                      div(class="")
-                          img(src=creditNoteJson.invoiceLogo height="80px" width="80px ")
-                  div(class=" width-100")
-                      div(class="monst mt-5")
-                          span(class="go") !{orgJson.businessName}
-                      div(class="monst mt-5  width-100")
-                          div(class="text-secondary width-100") !{orgJson.permanentAddress.address_line_1}, !{orgJson.permanentAddress.address_line_2 }
-                      div(class="mt-5")
-                          span(class="text-secondary") PHONE:
-                          span(class="text-secondary label-Padding") !{orgJson.mobileNo}
-                          span(class="text-secondary") GSTIN:
-                          span(class="text-secondary label-Padding") !{orgJson.GSTIN}
+              div(class="width-100 flex-container pn bright-1") sample testing
+            //-       if creditNoteJson.invoiceLogo && creditNoteJson.invoiceLogo.length > 0
+            //-           div(class="")
+            //-               img(src=creditNoteJson.invoiceLogo height="80px" width="80px ")
+            //-       div(class=" width-100")
+            //-           div(class="monst mt-5")
+            //-               span(class="go") !{orgJson.businessName}
+            //-           div(class="monst mt-5  width-100")
+            //-               div(class="text-secondary width-100") !{orgJson.permanentAddress.address_line_1}, !{orgJson.permanentAddress.address_line_2 }
+            //-           div(class="mt-5")
+            //-               span(class="text-secondary") PHONE:
+            //-               span(class="text-secondary label-Padding") !{orgJson.mobileNo}
+            //-               span(class="text-secondary") GSTIN:
+            //-               span(class="text-secondary label-Padding") !{orgJson.GSTIN}
 
-              div(class="width-100 flex-center-center ")
-                div(class="width-100 flex-column-center")
-                    div(class="width-100 text-secondary fw-500 text-align-center") Credit Note Number
-                    div(class=" width-100 text-secondary text-align-center") !{creditNoteJson.creditNoteNumber}
-                div(class="width-100 flex-column-center")
-                    div(class="width-100 text-secondary fw-500 text-align-center") Credit Note Date
-                    div(class="width-100 text-secondary text-align-center") !{creditNoteJson.creditNoteDate}
-                div(class="width-100 flex-column-center")
-                    div(class="width-100 text-secondary fw-500 text-align-center") Invoice Date
-                    div(class="width-100 text-secondary text-align-center") !{creditNoteJson.invoiceDate}
+            //-   div(class="width-100 flex-center-center ")
+            //-     div(class="width-100 flex-column-center")
+            //-         div(class="width-100 text-secondary fw-500 text-align-center") Credit Note Number
+            //-         div(class=" width-100 text-secondary text-align-center") !{creditNoteJson.creditNoteNumber}
+            //-     div(class="width-100 flex-column-center")
+            //-         div(class="width-100 text-secondary fw-500 text-align-center") Credit Note Date
+            //-         div(class="width-100 text-secondary text-align-center") !{creditNoteJson.creditNoteDate}
+            //-     div(class="width-100 flex-column-center")
+            //-         div(class="width-100 text-secondary fw-500 text-align-center") Invoice Date
+            //-         div(class="width-100 text-secondary text-align-center") !{creditNoteJson.invoiceDate}
 
-            div(class="flex-container pn br-1 bt-none")
-              div(class="width-100 flex-container")
-                div(class="width-100 ph-10 text-secondary")
-                  div(class="bold") RETURN TO
-                  div(class="go text-secondary") !{creditNoteJson.customerName}
-                  if creditNoteJson.customerAddress.billingAddress.addressLine1
-                    div(class="text-secondary width-90-per") !{creditNoteJson.customerAddress.billingAddress.addressLine1},
-                  if creditNoteJson.customerAddress.billingAddress.addressLine2
-                    div(class="text-secondary width-90-per") !{creditNoteJson.customerAddress.billingAddress.addressLine2},
-                  div() !{creditNoteJson.customerAddress.billingAddress.state}, !{creditNoteJson.customerAddress.billingAddress.pincode}
+            //- div(class="flex-container pn br-1 bt-none")
+            //-   div(class="width-100 flex-container")
+            //-     div(class="width-100 ph-10 text-secondary")
+            //-       div(class="bold") RETURN TO
+            //-       div(class="go text-secondary") !{creditNoteJson.customerName}
+            //-       if creditNoteJson.customerAddress.billingAddress.addressLine1
+            //-         div(class="text-secondary width-90-per") !{creditNoteJson.customerAddress.billingAddress.addressLine1},
+            //-       if creditNoteJson.customerAddress.billingAddress.addressLine2
+            //-         div(class="text-secondary width-90-per") !{creditNoteJson.customerAddress.billingAddress.addressLine2},
+            //-       div() !{creditNoteJson.customerAddress.billingAddress.state}, !{creditNoteJson.customerAddress.billingAddress.pincode}
 
-              div(class="width-100 flex-container text-algin-center ")
-                div(class="width-100 ph-10 text-secondary fs-12")
-                  div(class="bold") CREDIT NOTE
+            //-   div(class="width-100 flex-container text-algin-center ")
+            //-     div(class="width-100 ph-10 text-secondary fs-12")
+            //-       div(class="bold") CREDIT NOTE
 
-              div(class="width-100 flex-container text-algin-end ")
-                div(class="width-100 ph-10 text-secondary text-algin-end")
-                  div(class="bold") !{creditNoteJson.creditNoteDate}
+            //-   div(class="width-100 flex-container text-algin-end ")
+            //-     div(class="width-100 ph-10 text-secondary text-algin-end")
+            //-       div(class="bold") !{creditNoteJson.creditNoteDate}
 
             
-            div(class="flex bg-grey br-1 bt-none")
-                div(class="width-200 ")
-                    div(class="bold fs-10") ITEMS
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") HSN
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") QTY
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") RATE
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") UOM
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") DISC.(%)
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") TAX
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") AMT.
+            //- div(class="flex bg-grey br-1 bt-none")
+            //-     div(class="width-200 ")
+            //-         div(class="bold fs-10") ITEMS
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") HSN
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") QTY
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") RATE
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") UOM
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") DISC.(%)
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") TAX
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") AMT.
 
-            div(class="table-height br-1 bt-none")
-              each val in creditNoteJson.lineItems
-                  div(class="flex bb-1 item-name pt-10")
-                      div(class="flex-align width-200 pn pl-10 item-name")
-                          if !val.batch && !val.serialNos.length > 0
-                            div(class="flex-align width-200 pn pl-10")
-                              div(class="fs-10 bold width-90-per") !{val.itemName}
-                              div(class="fs-10 color-secondary")
-                          if val.batch
-                            div(class="flex-align width-200 pn pl-10")
-                                div(class="fs-10 bold width-90-per") !{val.itemName}
-                                div(class="fs-10 color-secondary") !{val.batch}
-                          if val.serialNos.length > 0 
-                            div(class="flex-align width-200 pn pl-10 serial")
-                                div(class="fs-10 bold width-90-per") !{val.itemName}
-                                div(class="fs-10 color-secondary width-95-per") !{val.serialNos.join(", ")}
-                      div(class="width-100 flex-align pn item-name")
-                          div(class="fs-10") !{val.itemHsnOrSac || "-" }
-                          div(class="width-100 ")
-                      div(class="width-100 flex-align pn item-name ")
-                          div(class="fs-10") !{val.itemQty}
-                          div(class="width-100 ")
-                      div(class="width-100 flex-align pn item-name")
-                          div(class="fs-10") !{val.itemPrice}
-                          div(class="width-100 ")
-                      div(class="width-100 flex-align pn item-name")
-                          div(class="fs-10") !{val.uom}
-                          div(class="width-100 ")
-                      div(class="width-100 flex-align pn item-name")
-                          div(class="fs-10") !{val.discount}
-                          div(class="width-100 ")
-                      div(class="width-100 flex-align pn p justify-content-space-between")
-                          div(class="fs-10") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
-                          div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
-                      div(class="width-100 flex-align pn pr-10 item-name")
-                          div(class="fs-10") !{Number(val.itemAmount).toFixed(2)}
-                          div(class="width-100 ")
+            //- div(class="table-height br-1 bt-none")
+            //-   each val in creditNoteJson.lineItems
+            //-       div(class="flex bb-1 item-name pt-10")
+            //-           div(class="flex-align width-200 pn pl-10 item-name")
+            //-               if !val.batch && !val.serialNos.length > 0
+            //-                 div(class="flex-align width-200 pn pl-10")
+            //-                   div(class="fs-10 bold width-90-per") !{val.itemName}
+            //-                   div(class="fs-10 color-secondary")
+            //-               if val.batch
+            //-                 div(class="flex-align width-200 pn pl-10")
+            //-                     div(class="fs-10 bold width-90-per") !{val.itemName}
+            //-                     div(class="fs-10 color-secondary") !{val.batch}
+            //-               if val.serialNos.length > 0 
+            //-                 div(class="flex-align width-200 pn pl-10 serial")
+            //-                     div(class="fs-10 bold width-90-per") !{val.itemName}
+            //-                     div(class="fs-10 color-secondary width-95-per") !{val.serialNos.join(", ")}
+            //-           div(class="width-100 flex-align pn item-name")
+            //-               div(class="fs-10") !{val.itemHsnOrSac || "-" }
+            //-               div(class="width-100 ")
+            //-           div(class="width-100 flex-align pn item-name ")
+            //-               div(class="fs-10") !{val.itemQty}
+            //-               div(class="width-100 ")
+            //-           div(class="width-100 flex-align pn item-name")
+            //-               div(class="fs-10") !{val.itemPrice}
+            //-               div(class="width-100 ")
+            //-           div(class="width-100 flex-align pn item-name")
+            //-               div(class="fs-10") !{val.uom}
+            //-               div(class="width-100 ")
+            //-           div(class="width-100 flex-align pn item-name")
+            //-               div(class="fs-10") !{val.discount}
+            //-               div(class="width-100 ")
+            //-           div(class="width-100 flex-align pn p justify-content-space-between")
+            //-               div(class="fs-10") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
+            //-               div(class="width-100 fs-10 color-secondary") (!{val.itemTax} %)
+            //-           div(class="width-100 flex-align pn pr-10 item-name")
+            //-               div(class="fs-10") !{Number(val.itemAmount).toFixed(2)}
+            //-               div(class="width-100 ")
 
-            div(class="flex height-30 br-1 bt-none bg-grey")
-                div(class="width-200 ")
-                    div(class="bold fs-10") Total Amount
-                div(class="width-100 ")
-                    div(class="bold fs-10 ")
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") !{creditNoteJson.lineItems.reduce((acc, obj) => acc + Number(obj.itemQty), 0)}
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") 
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") 
-                div(class="width-100 ")
-                    div(class="bold fs-10 ")
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") ₹ !{creditNoteJson.lineItems.reduce((acc, obj) => acc + Number(obj.itemAmount - obj.taxableAmount), 0).toFixed(2)}
-                div(class="width-100 ")
-                    div(class="bold fs-10 ") ₹ !{creditNoteJson.lineItems.reduce((acc, obj) => acc + Number(obj.itemAmount), 0).toFixed(2)}
+            //- div(class="flex height-30 br-1 bt-none bg-grey")
+            //-     div(class="width-200 ")
+            //-         div(class="bold fs-10") Total Amount
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ")
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") !{creditNoteJson.lineItems.reduce((acc, obj) => acc + Number(obj.itemQty), 0)}
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") 
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") 
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ")
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") ₹ !{creditNoteJson.lineItems.reduce((acc, obj) => acc + Number(obj.itemAmount - obj.taxableAmount), 0).toFixed(2)}
+            //-     div(class="width-100 ")
+            //-         div(class="bold fs-10 ") ₹ !{creditNoteJson.lineItems.reduce((acc, obj) => acc + Number(obj.itemAmount), 0).toFixed(2)}
 
-            if creditNoteUniqueTaxes[0] && String(creditNoteUniqueTaxes[0]).includes("IGST")
-                div(class="flex br-1 mt-10 bg-grey pn") 
-                    div(class="width-100")
-                        div(class="bold hsn-table justify-content-center  bright-1") HSN/SAC
-                    div(class="width-100 ")
-                        div(class="bold hsn-table justify-content-center  bright-1") Taxable Value
-                    div(class="width-100 flex-container flex-direction-column pn height-100") 
-                        div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") IGST
-                        div(class="flex-container hsn-table width-100 pn ")
-                          div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
-                          div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
-                    div(class="width-100 ")
-                        div(class="bold justify-content-center  hsn-table") Total Tax Amount
+            //- if creditNoteUniqueTaxes[0] && String(creditNoteUniqueTaxes[0]).includes("IGST")
+            //-     div(class="flex br-1 mt-10 bg-grey pn") 
+            //-         div(class="width-100")
+            //-             div(class="bold hsn-table justify-content-center  bright-1") HSN/SAC
+            //-         div(class="width-100 ")
+            //-             div(class="bold hsn-table justify-content-center  bright-1") Taxable Value
+            //-         div(class="width-100 flex-container flex-direction-column pn height-100") 
+            //-             div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") IGST
+            //-             div(class="flex-container hsn-table width-100 pn ")
+            //-               div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
+            //-               div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
+            //-         div(class="width-100 ")
+            //-             div(class="bold justify-content-center  hsn-table") Total Tax Amount
 
-                each val in hsnData
-                  div(class="flex br-1 h-30 bt-n pn")
-                      div(class="width-100")
-                          div(class="bold hsn-table justify-content-center  bright-1") !{val.itemHsnOrSac || "-"}
-                      div(class="width-100 ")
-                          div(class="bold hsn-table justify-content-center  bright-1") !{Number(val.taxableAmount).toFixed(2)}
-                      div(class="width-100 flex-container flex-direction-column pn height-100") 
-                          div(class="flex-container hsn-table width-100 pn ")
-                            div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{val.itemTax} %
-                            div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
-                      div(class="width-100 ")
-                          div(class="bold hsn-table justify-content-center ") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
+            //-     each val in hsnData
+            //-       div(class="flex br-1 h-30 bt-n pn")
+            //-           div(class="width-100")
+            //-               div(class="bold hsn-table justify-content-center  bright-1") !{val.itemHsnOrSac || "-"}
+            //-           div(class="width-100 ")
+            //-               div(class="bold hsn-table justify-content-center  bright-1") !{Number(val.taxableAmount).toFixed(2)}
+            //-           div(class="width-100 flex-container flex-direction-column pn height-100") 
+            //-               div(class="flex-container hsn-table width-100 pn ")
+            //-                 div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{val.itemTax} %
+            //-                 div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
+            //-           div(class="width-100 ")
+            //-               div(class="bold hsn-table justify-content-center ") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
                   
-            if creditNoteUniqueTaxes[0] && !(String(creditNoteUniqueTaxes[0]).includes("IGST"))
-              div(class="flex br-1 mt-10 bg-grey pn")
-                  div(class="width-100") 
-                      div(class="bold hsn-table justify-content-center  bright-1") HSN/SAC
-                  div(class="width-100 ")
-                      div(class="bold hsn-table justify-content-center  bright-1") Taxable Value
-                  div(class="width-100 flex-container flex-direction-column pn height-100") 
-                      div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") SGST
-                      div(class="flex-container hsn-table width-100 pn ")
-                        div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
-                        div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
-                  div(class="width-100 flex-container flex-direction-column pn height-100") 
-                      div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") CGST
-                      div(class="flex-container hsn-table width-100 pn ")
-                        div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
-                        div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
-                  div(class="width-100 ")
-                      div(class="bold justify-content-center  hsn-table") Total Tax Amount
+            //- if creditNoteUniqueTaxes[0] && !(String(creditNoteUniqueTaxes[0]).includes("IGST"))
+            //-   div(class="flex br-1 mt-10 bg-grey pn")
+            //-       div(class="width-100") 
+            //-           div(class="bold hsn-table justify-content-center  bright-1") HSN/SAC
+            //-       div(class="width-100 ")
+            //-           div(class="bold hsn-table justify-content-center  bright-1") Taxable Value
+            //-       div(class="width-100 flex-container flex-direction-column pn height-100") 
+            //-           div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") SGST
+            //-           div(class="flex-container hsn-table width-100 pn ")
+            //-             div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
+            //-             div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
+            //-       div(class="width-100 flex-container flex-direction-column pn height-100") 
+            //-           div(class="bold hsn-table text-align-center justify-content-center bright-1 bb-1") CGST
+            //-           div(class="flex-container hsn-table width-100 pn ")
+            //-             div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") Rate
+            //-             div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") Amount
+            //-       div(class="width-100 ")
+            //-           div(class="bold justify-content-center  hsn-table") Total Tax Amount
 
-              each val in hsnData
-                div(class="flex br-1 h-30 bt-n pn")
-                    div(class="width-100") 
-                        div(class="bold hsn-table justify-content-center  bright-1") !{val.itemHsnOrSac || "-"}
-                    div(class="width-100 ")
-                        div(class="bold hsn-table justify-content-center  bright-1") !{Number(val.taxableAmount).toFixed(2)}
-                    div(class="width-100 flex-container flex-direction-column pn height-100") 
-                        div(class="flex-container hsn-table width-100 pn ")
-                          div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{Number(val.itemTax) / 2} %
-                          div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number((val.itemAmount - val.taxableAmount )/2).toFixed(2)}
-                    div(class="width-100 flex-container flex-direction-column pn height-100") 
-                        div(class="flex-container hsn-table width-100 pn ")
-                          div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{Number(val.itemTax) / 2} %
-                          div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number((val.itemAmount - val.taxableAmount) / 2).toFixed(2) }
-                    div(class="width-100 ")
-                        div(class="bold hsn-table justify-content-center ") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
+            //-   each val in hsnData
+            //-     div(class="flex br-1 h-30 bt-n pn")
+            //-         div(class="width-100") 
+            //-             div(class="bold hsn-table justify-content-center  bright-1") !{val.itemHsnOrSac || "-"}
+            //-         div(class="width-100 ")
+            //-             div(class="bold hsn-table justify-content-center  bright-1") !{Number(val.taxableAmount).toFixed(2)}
+            //-         div(class="width-100 flex-container flex-direction-column pn height-100") 
+            //-             div(class="flex-container hsn-table width-100 pn ")
+            //-               div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{Number(val.itemTax) / 2} %
+            //-               div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number((val.itemAmount - val.taxableAmount )/2).toFixed(2)}
+            //-         div(class="width-100 flex-container flex-direction-column pn height-100") 
+            //-             div(class="flex-container hsn-table width-100 pn ")
+            //-               div(class=" width-100 bold hsn-table  text-align-center pn justify-content-center bright-1 ") !{Number(val.itemTax) / 2} %
+            //-               div(class="width-100 bold hsn-table  text-align-center pn justify-content-center bright-1") !{Number((val.itemAmount - val.taxableAmount) / 2).toFixed(2) }
+            //-         div(class="width-100 ")
+            //-             div(class="bold hsn-table justify-content-center ") !{Number(val.itemAmount - val.taxableAmount).toFixed(2)}
 
-            div(class="width-100 num-to-eng br-1 mt-10")
-              div(class="fs-10 bold") Invoice Amount (in words)
-              div(class="fs-10") !{creditNoteJson.amountInWords}
+            //- div(class="width-100 num-to-eng br-1 mt-10")
+            //-   div(class="fs-10 bold") Invoice Amount (in words)
+            //-   div(class="fs-10") !{creditNoteJson.amountInWords}
 
 
-            div(class="width-100 flex-container br-1 pl-10 bt-n")
-              div(class="flex-container mr-10 width-100 pn")
-                  div(class="fs-12-lh-20  white-space-nowrap-no-width color-secondary mr-5") BANK NAME:
-                  div(class="fs-12-lh-20 white-space-nowrap-no-width") !{creditNoteJson.invoiceBankDetails.bankName}
-              div(class="flex-container mr-10 white-space-nowrap-no-width width-100 pn")
-                  div(class="fs-12-lh-20 color-secondary mr-5") A/C No.
-                  div(class="fs-12-lh-20") !{creditNoteJson.invoiceBankDetails.accountNumber}
-              div(class="flex-container width-100 pn")
-                  div(class="fs-12-lh-20 color-secondary mr-5") IFSC:
-                  div(class="fs-12-lh-20") !{creditNoteJson.invoiceBankDetails.ifscCode}
+            //- div(class="width-100 flex-container br-1 pl-10 bt-n")
+            //-   div(class="flex-container mr-10 width-100 pn")
+            //-       div(class="fs-12-lh-20  white-space-nowrap-no-width color-secondary mr-5") BANK NAME:
+            //-       div(class="fs-12-lh-20 white-space-nowrap-no-width") !{creditNoteJson.invoiceBankDetails.bankName}
+            //-   div(class="flex-container mr-10 white-space-nowrap-no-width width-100 pn")
+            //-       div(class="fs-12-lh-20 color-secondary mr-5") A/C No.
+            //-       div(class="fs-12-lh-20") !{creditNoteJson.invoiceBankDetails.accountNumber}
+            //-   div(class="flex-container width-100 pn")
+            //-       div(class="fs-12-lh-20 color-secondary mr-5") IFSC:
+            //-       div(class="fs-12-lh-20") !{creditNoteJson.invoiceBankDetails.ifscCode}
 
-            div(class="flex-container pn br-1 bt-n")
-              div(class="pl-10 pt-5 pb-5 width-100 bright-1 pr-10")
-                div(class="fs-10 bold width-100") Terms and Conditions
-                div(class="fs-10 width-100 pn") !{creditNoteJson.termsAndConditions || ""}
-              div(class="flex-center-center justify-content-end flex-direction-column pl-10 pr-10 width-40 height-100px justify-content-space-between")
-                  if creditNoteJson.invoiceSignature && creditNoteJson.invoiceSignature.length
-                      div(class="")
-                          img(src=creditNoteJson.invoiceSignature height="60px" width="170px ")
-                  else 
-                  div(class="width-100")
-                  div(class="fs-10 mt-10 text-align-end pb-10") Authorised Signature
+            //- div(class="flex-container pn br-1 bt-n")
+            //-   div(class="pl-10 pt-5 pb-5 width-100 bright-1 pr-10")
+            //-     div(class="fs-10 bold width-100") Terms and Conditions
+            //-     div(class="fs-10 width-100 pn") !{creditNoteJson.termsAndConditions || ""}
+            //-   div(class="flex-center-center justify-content-end flex-direction-column pl-10 pr-10 width-40 height-100px justify-content-space-between")
+            //-       if creditNoteJson.invoiceSignature && creditNoteJson.invoiceSignature.length
+            //-           div(class="")
+            //-               img(src=creditNoteJson.invoiceSignature height="60px" width="170px ")
+            //-       else 
+            //-       div(class="width-100")
+            //-       div(class="fs-10 mt-10 text-align-end pb-10") Authorised Signature
 
 
 
