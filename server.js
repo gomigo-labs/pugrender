@@ -1,7 +1,7 @@
 const pug = require("pug");
 const fs = require("fs");
-const PdfService = require("./pdf-service");
-const httpService = require("./http-service");
+const PdfService = require("./common/pdf-service");
+const httpService = require("./common/http-service");
 const moment = require("moment");
 const base64Img = require("base64-img");
 const { httpConstants } = require("./common/constants");
