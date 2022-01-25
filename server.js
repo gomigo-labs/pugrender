@@ -5,38 +5,12 @@ const httpService = require("./http-service");
 const moment = require("moment");
 const base64Img = require("base64-img");
 const { httpConstants } = require("./common/constants");
-const orgJsonData = require("./org.json");
-const creditNoteJson = require("./creditnote.json");
-const debitNoteJson = require("./debitnote.json");
-const salesOrderJson = require("./salesOrderInvoice.json");
+
+const dataJson = require("./data.json");
+
 
 //variables
 let content;
-
-let invoiceJson = require("./invoice.json");
-
-let pharmaInvoiceJson = require("./pharmaJson.json");
-let hsnData = {};
-
-for (let lineItem of invoiceJson.lineItems) {
-  if (hsnData.hasOwnProperty(lineItem.itemHsnOrSac)) {
-    hsnData[`${lineItem.itemHsnOrSac}`].taxableAmount += Number(
-      lineItem.taxableAmount
-    );
-    hsnData[`${lineItem.itemHsnOrSac}`].itemAmount += Number(
-      lineItem.itemAmount
-    );
-  } else {
-    hsnData[`${lineItem.itemHsnOrSac}`] = {
-      itemHsnOrSac: lineItem.itemHsnOrSac,
-      taxableAmount: Number(lineItem.taxableAmount),
-      itemTax: lineItem.itemTax,
-      itemAmount: Number(lineItem.itemAmount),
-    };
-  }
-}
-
-hsnData = Object.values(hsnData);
 
 content = pug.renderFile("gst.pug", {
   title: invoiceJson.invoiceNumber,
@@ -69,5 +43,3 @@ fs.writeFile("gst_html.html", content, function (err, data) {
   }
   console.log("Pdf Created");
 });
-
-PdfService.createPdf("A4");
