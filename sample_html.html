@@ -1,18 +1,23 @@
 <html><head><style type="text/css">html {
     -webkit-print-color-adjust: exact;
+    box-sizing: border-box !important;
 }
 .div-center {
     display: flex !important;
     justify-content: center !important;
     height: fit-content !important;
     width: 100% !important;
+    background-color: #fafafa !important;
+    box-sizing: border-box !important;
 }
 
 .body-center {
     border-radius: 4px;
-    padding: 10px;
-    height: 450px;
-    width: 80%;
+    padding: 5% 10%;
+    height: fit-content !important;
+    width: 100%;
+    background-color: #fafafa !important;
+    box-sizing: border-box !important;
 }
 
 .height-80 {
@@ -694,9 +699,15 @@ body, button, html, input, select, textarea, div, p, span, label {
 }
 
 .text-secondary {
-    font-size: 10px;
-    line-height: 14px;
-    width: 100%
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #737373;
 }
 
 .label {
@@ -787,7 +798,9 @@ padding: 0 10px
 
 .flex-container {
     display: flex;
-    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
 }
 
@@ -962,8 +975,8 @@ padding: 0 10px
   align-items: flex-start !important
 }
 
-.pt-10 {
-  padding-top: 5px !important;
+.pt-24 {
+  padding-top: 24px !important;
 }
 
 .p {
@@ -989,4 +1002,35 @@ padding: 0 10px
 .pb-10 {
   padding-bottom: 10px
 }
-</style></head></html><body><div class="div-center"><div class="body-center height-100 width-100 monst bg-white position-relative"><div class="flex-container pn br-1"><div class="width-100 flex-container pn bright-1">sample testing</div></div></div></div></body>
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 48px 32px;
+}
+
+.title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #171717;
+}
+
+.text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
+  color: #171717;
+}
+</style></head></html><body><div class="div-center"><div class="body-center monst position-relative"><div class="flex-container"><div class="container"><span class="title">User name</span><span class="text-secondary">We’re delighted to have you on board</span><span class="text pt-24">Your account is now set up and ready to use. Let’s get started! To activate your Scrut account, please use the login details below:</span></div></div></div></div></body>
