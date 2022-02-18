@@ -1,10 +1,6 @@
-{
-"alerts": [
+[
   {
-    "alertTitle": "Engineering",
-    "items": [
-      "test1 <a href> <>","test2"
-    ]
+    "itemTitle": "title",
+    "itemDescription": "testing for  html link <a class='link-styles' href='https://www.w3schools.com/'>Visit W3Schools.com!</a>"
   }
 ]
-}
