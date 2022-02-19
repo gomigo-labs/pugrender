@@ -9,10 +9,9 @@ html
             }
 
             .body-center {
-                text-align: center !important;
                 margin: auto !important;
                 border-radius: 4px;
-                padding: 10px;
+                padding: 40px;
                 height: 450px;
             }
 
@@ -54,9 +53,8 @@ html
             }
 
             .display-flex {
-                display: flex !important;
-                justify-content: center !important;
-                font-size: 50px;
+                margin: auto !important;
+                width: 100% !important
             }
 
             .jc-center {
@@ -70,6 +68,7 @@ html
             .width-100-per {
                 width: 100% !important;
             }
+            
             .text-align-center {
                 text-align: center !important;
             }
@@ -104,7 +103,7 @@ html
             }
 
             .fs-12 {
-                font-size: 12pt;
+                font-size: 12px;
             }
 
             .max-width-421 {
@@ -230,7 +229,7 @@ html
             }
 
             .fw-bold {
-                font-weight: bold;
+                font-weight: 600;
             }
 
 
@@ -301,6 +300,9 @@ html
                 font-size: 30px;
             }
 
+            .fs-20 {
+                font-size: 20px;
+            }
 
             .row {
                 margin: auto;
@@ -460,9 +462,8 @@ html
                 color: #14034f;
             }
 
-            .fs-18 {
-                font-size: 18px;
-                margin-bottom: 20px;
+            .fs-16 {
+                font-size: 16px;
             }
 
             .fs-14 {
@@ -470,7 +471,7 @@ html
             }
 
             .fc-lightGrey {
-                color: #999999 !important;
+                color: #737373 !important;
             }
 
             .fs-26 {
@@ -486,7 +487,7 @@ html
             }
 
             .fc-222222 {
-                color: #222222 !important;
+                color: #171717 !important;
             }
 
             .width-full{
@@ -630,12 +631,11 @@ html
             }
 
             .dontLink a {
-                color: inherit !important;
-                text-decoration: none !important;
-                font-size: inherit !important;
-                font-family: inherit !important;
-                font-weight: inherit !important;
-                line-height: inherit !important;
+                color: blue !important;
+            }
+
+            .bb-1 {
+              border-bottom: 1px solid #E5E5E5 !important;
             }
 
             .border-grey {
@@ -651,14 +651,86 @@ html
                 color: red;
             }
 
+            .mt-24 {
+                margin-top: 24px !important;
+            }
+
+            .mt-16 {
+                margin-top: 16px !important;
+            }
+
+            .mt-32 {
+                margin-top: 32px !important;
+            }
+
+            .pb-12 {
+                padding-bottom: 12px !important;
+            }
+
+            .pb-32 {
+                padding-bottom: 32px !important;
+            }
+
+            .pb-24 {
+                padding-bottom: 24px !important;
+            }
+
+            .pb-16 {
+                padding-bottom: 16px !important;
+            }
+            
+            .pt-16 {
+                padding-top: 16px !important;
+            }
+
+            .pt-32 {
+                padding-top: 32px !important;
+            }
+
+            .flex-container {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                margin: 0 auto !important;
+            }
+
+            .button {
+              width: 200px;
+              background: #FFFFFF;
+              border: 1px solid #0052CC;
+              border-radius: 4px;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 26px;
+              letter-spacing: 0.015em;
+              text-transform: uppercase;
+              color: #0052CC;
+              text-align: center !important;
+              padding: 20px 16px;
+            }
+
+            .footer-padding {
+              padding: 0 50px;
+            }
+
 body
+    div(class="text-align-center pb-24 pt-32 bg-f7f7f7")
+        img(src="https://i.ibb.co/bbrKXQZ/Blue-Logo-for-Dark-background.png" width="200")
     div(class="div-center bg-f7f7f7")
         div(class="body-center height-100 monst width-full bg-white")
-            div(class="monst display-flex mt-25")
-                span(class="monst fw-500 fc-434343 go-span") go
-                span(class="monst migo-span fw-500 fc-0065BD") migo
+            div(class="text-align-center pb-12")
+                img(src="https://pics.clipartpng.com/Danger_Warning_Sign_PNG_Clipart-812.png" width="50")
+            div(class="monst text-align-center")
+                div(class="fs-20 text-align-center fw-bold fc-222222 lh-30") We need your attention
             div(class="m-t-50")
-                div(class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30 dontLink " style="text-decoration: none; color: # 000;") !{description}
-                div(class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30") !{dochtml}
-                div(class="fs-18 m-t-45 text-align-center fw-bold fc-222222 lh-30") !{apphtml}
-                div(class="m-t-30 fs-14 fc-lightGrey dontLink") !{footer}
+                each val in data
+                  if val.itemDescription.length > 0
+                    div(class="bb-1 mt-24 pb-12")
+                      div(class="fs-16 fw-bold fc-222222 lh-30" ) !{val.itemTitle}
+                      each innerVal in val.itemDescription
+                        div(class="fs-14 fc-222222 lh-30 dontLink" style="text-decoration: none;") !{innerVal}
+            div(class="flex-container jc-center pb-32 bb-1 pt-32")
+                div(class="flex-container button text-align-center") LOGIN TO ACCOUNT
+            div(class="footer-padding pt-16 fs-12 fc-lightGrey dontLink") If you have any questions regarding your Scrut account, please contact us at support@scrut.io . Our support team will assist you with anything you need.

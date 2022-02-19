@@ -7,12 +7,14 @@ const base64Img = require("base64-img");
 const { httpConstants } = require("./common/constants");
 
 const dataJson = require("./data/data.json");
+const warningSvg = require("./data/warningSvg.json");
 
 //variables
 let content;
 
-content = pug.renderFile("./templates/sample.pug", {
+content = pug.renderFile("./templates/template.pug", {
   data: dataJson,
+  warningSvg: warningSvg,
   // invoiceDate: moment(invoiceJson.invoiceDate).format("DD/MM/YYYY"),
   // dueDate: moment(invoiceJson.dueDate).format("DD/MM/YYYY"),
   // uniqueTaxes: Object.entries(invoiceJson.uniqueTaxes),
