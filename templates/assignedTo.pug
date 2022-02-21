@@ -363,6 +363,10 @@ html
                 width: 1000px;
             }
 
+            .w-100 {
+                width: 100%;
+            }
+
 
             .button-div {
                 margin: auto;
@@ -697,7 +701,7 @@ html
             }
 
             .button {
-              width: 200px;
+              width: 162px;
               background: #FFFFFF;
               border: 1px solid #0052CC;
               border-radius: 4px;
@@ -716,22 +720,24 @@ html
               padding: 0 50px;
             }
 
+            .pl-5 {
+              padding-left: 5px;
+            }
+
+            .lh-22 {
+              line-height: 22px;
+            }
+
 body
     div(class="text-align-center pb-24 pt-32 bg-f7f7f7")
         img(src="https://s3.amazonaws.com/scrut.io/logo.png" width="320")
     div(class="div-center bg-f7f7f7")
         div(class="body-center height-100 monst width-full bg-white")
-            div(class="text-align-center pb-12")
-                img(src="https://s3.amazonaws.com/scrut.io/unnamed+(2).png" width="50")
-            div(class="monst text-align-center")
-                div(class="fs-20 text-align-center fw-bold fc-222222 lh-30") We need your attention
+            div(class="monst text-align-center w-100")
+                div(class="fs-20 text-align-center fw-bold fc-222222 lh-30") !{assignedBy.assignedBy}
+                div(class="pl-5 fs-20 text-align-center fc-222222 lh-30") has assigned you the following task:
             div(class="m-t-50")
-                each val in data
-                  if val.itemDescription.length > 0
-                    div(class="bb-1 mt-24 pb-12")
-                      div(class="fs-16 fw-bold fc-222222 lh-30" ) !{val.itemTitle}
-                      each innerVal in val.itemDescription
-                        div(class="fs-14 fc-222222 lh-30 dontLink" style="text-decoration: none;") !{innerVal}
+                div(class="fs-14 lh-22 fc-222222 dontLink" style="text-decoration: none;") !{assignedBy.message}
             div(class="flex-container jc-center pb-32 bb-1 pt-32")
-                a(href="https://app.scrut.io/" class="flex-container button text-align-center") LOGIN TO ACCOUNT
+                a(href=assignedBy.url class="flex-container button text-align-center") view the task
             div(class="footer-padding pt-16 fs-12 fc-lightGrey dontLink") If you have any questions regarding your Scrut account, please contact us at support@scrut.io . Our support team will assist you with anything you need.

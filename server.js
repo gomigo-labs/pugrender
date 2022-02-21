@@ -7,14 +7,16 @@ const base64Img = require("base64-img");
 const { httpConstants } = require("./common/constants");
 
 const dataJson = require("./data/data.json");
-const warningSvg = require("./data/warningSvg.json");
+const mentionedByJson = require("./data/mentionedBy.json");
+const assignedByJson = require("./data/assignedTo.json");
 
 //variables
 let content;
 
-content = pug.renderFile("./templates/template.pug", {
+content = pug.renderFile("./templates/comments.pug", {
   data: dataJson,
-  warningSvg: warningSvg,
+  mentionedBy: mentionedByJson,
+  assignedBy: assignedByJson,
   // invoiceDate: moment(invoiceJson.invoiceDate).format("DD/MM/YYYY"),
   // dueDate: moment(invoiceJson.dueDate).format("DD/MM/YYYY"),
   // uniqueTaxes: Object.entries(invoiceJson.uniqueTaxes),
