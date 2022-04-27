@@ -1,18 +1,14 @@
 [
   {
-    "itemTitle": "Title Description",
-    "itemDescription": ["Testing for  html link <a class='link-styles' href='https://www.w3schools.com/'>Visit W3Schools.com!</a>", "Testing for  html link <a class='link-styles' href='https://www.w3schools.com/'>Visit W3Schools.com!</a>", "Testing for  html link <a class='link-styles' href='https://www.w3schools.com/'>Visit W3Schools.com!</a>"]
+      "itemTitle": "Evidence Summary",
+      "itemDescription": [
+          "98 evidences are not uploaded on <a class='link-styles' href= \"https://api-dev.scrut.io/evidences?status=NOT_UPLOADED\"> Evidences </a>"
+      ]
   },
   {
-    "itemTitle": "Title Description 2",
-    "itemDescription": []
-  },
-  {
-    "itemTitle": "Title Description 3",
-    "itemDescription": ["Testing for  html link <a class='link-styles' href='https://www.w3schools.com/'>Visit W3Schools.com!</a>", "Testing for  html link <a class='link-styles' href='https://www.w3schools.com/'>Visit W3Schools.com!</a>"]
-  },
-  {
-    "itemTitle": "Title Description 4",
-    "itemDescription": ["Testing for  html link <a class='link-styles' href='https://www.w3schools.com/'>Visit W3Schools.com!</a>"]
+      "itemTitle": "Policy Summary",
+      "itemDescription": [
+          "4 policies are in draft on <a class='link-styles' href= \"https://api-dev.scrut.io/policy?status=DRAFT\"> Policies </a>"
+      ]
   }
 ]

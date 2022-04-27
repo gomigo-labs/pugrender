@@ -13,7 +13,7 @@ const assignedByJson = require("./data/assignedTo.json");
 //variables
 let content;
 
-content = pug.renderFile("./templates/comments.pug", {
+content = pug.renderFile("./templates/template.pug", {
   data: dataJson,
   mentionedBy: mentionedByJson,
   assignedBy: assignedByJson,
